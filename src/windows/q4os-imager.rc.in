@@ -1,0 +1,28 @@
+#include <windows.h>
+
+IDI_ICON1 ICON DISCARDABLE "@Q4OS_IMAGER_ICON_PATH@"
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "@Q4OS_IMAGER_MANIFEST_PATH@"
+
+1 VERSIONINFO
+FILEVERSION IMAGER_VERSION_CSV
+PRODUCTVERSION IMAGER_VERSION_CSV
+{
+    BLOCK "StringFileInfo"
+    {
+        BLOCK "040904b0"
+        {
+            VALUE "CompanyName",      "Jupiter4 foundation"
+            VALUE "FileDescription",  "Q4OS Imager"
+            VALUE "ProductName",      "Q4OS Imager"
+            VALUE "FileVersion",      "@IMAGER_VERSION_STR@"
+            VALUE "ProductVersion",   "@IMAGER_VERSION_STR@"
+            VALUE "InternalName",     "q4os-imager"
+            VALUE "OriginalFilename", "q4os-imager.exe"
+            VALUE "LegalCopyright",   "Copyright (c) 2026 Jupiter4 foundation"
+        }
+    }
+    BLOCK "VarFileInfo"
+    {
+        VALUE "Translation", 0x409, 1252
+    }
+}

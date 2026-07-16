@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Imager
+Comment=Q4OS Imager
+Icon=q4os-imager
+Exec=q4os-imager
+Categories=Utility
+StartupNotify=false

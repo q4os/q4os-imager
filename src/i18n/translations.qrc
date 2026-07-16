@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/i18n">
+        <file>q4os-imager_de.qm</file>
+        <file>q4os-imager_en.qm</file>
+        <file>q4os-imager_fr.qm</file>
+        <file>q4os-imager_it.qm</file>
+        <file>q4os-imager_ko.qm</file>
+        <file>q4os-imager_nl.qm</file>
+        <file>q4os-imager_ru.qm</file>
+        <file>q4os-imager_sl.qm</file>
+        <file>q4os-imager_sk.qm</file>
+        <file>q4os-imager_tr.qm</file>
+        <file>q4os-imager_zh.qm</file>
+        <file>q4os-imager_ca.qm</file>
+        <file>q4os-imager_ja.qm</file>
+    </qresource>
+</RCC>

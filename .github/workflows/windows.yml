@@ -1,0 +1,100 @@
+name: windows-installer
+
+# Build the Windows q4os-imager.exe (Qt 5.15 / MinGW 32-bit, matching
+# README.md) and pack it with NSIS into imager-<version>.exe.
+# The NSIS script's code-signing lines are commented out upstream, so the
+# installer is produced unsigned; signing stays a manual release step.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+    tags: [ 'v*' ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Qt 5.15.2 (MinGW 32-bit) + MinGW
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '5.15.2'
+          arch: 'win32_mingw81'
+          tools: 'tools_mingw,qt.tools.win32_mingw810 tools_ninja,qt.tools.ninja'
+          cache: true
+
+      # the Qt SDK no longer ships 32-bit OpenSSL 1.1 tools; Qt 5.15 needs the
+      # 1.1 DLLs at runtime, fetch them checksum-pinned from FireDaemon
+      - name: Fetch OpenSSL 1.1 win32 runtime DLLs
+        shell: pwsh
+        run: |
+          Invoke-WebRequest -Uri https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-1.1.1w.zip -OutFile openssl.zip
+          $h = (Get-FileHash openssl.zip -Algorithm SHA256).Hash.ToLower()
+          if ($h -ne "1870b15bf6749e65ffbbadf52cdff3ee0e9f02943550bf4395574bb432af3eb8") { throw "openssl zip checksum mismatch: $h" }
+          Expand-Archive openssl.zip -DestinationPath $env:RUNNER_TEMP\openssl
+          # mingw cmake only searches .dll.a/.a - alias the msvc import libs
+          $lib = "$env:RUNNER_TEMP\openssl\openssl-1.1\x86\lib"
+          Copy-Item "$lib\libcrypto.lib" "$lib\libcrypto.dll.a"
+          Copy-Item "$lib\libssl.lib" "$lib\libssl.dll.a"
+          Get-ChildItem $lib | Select-Object Name
+
+      # Ninja generator: "MinGW Makefiles" refuses to run with git's sh.exe
+      # in PATH, which the github runners always have
+      - name: Configure (CMake, Ninja, MinGW gcc)
+        shell: cmd
+        run: |
+          set PATH=%IQTA_TOOLS%\mingw810_32\bin;%IQTA_TOOLS%\Ninja;%PATH%
+          rem bypass FindOpenSSL search heuristics, set its results explicitly
+          set "OSSL=%RUNNER_TEMP:\=/%/openssl/openssl-1.1/x86"
+          echo OSSL=%OSSL%
+          cmake -G Ninja -B build -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -DOPENSSL_ROOT_DIR=%OSSL% -DOPENSSL_INCLUDE_DIR=%OSSL%/include -DOPENSSL_SSL_LIBRARY=%OSSL%/lib/libssl.lib -DOPENSSL_CRYPTO_LIBRARY=%OSSL%/lib/libcrypto.lib src
+
+      - name: Build (also deploys Qt runtime into build/deploy)
+        shell: cmd
+        run: |
+          set PATH=%IQTA_TOOLS%\mingw810_32\bin;%PATH%
+          cmake --build build -j 4
+
+      - name: Install NSIS
+        run: choco install nsis -y
+
+      - name: Create installer
+        shell: cmd
+        working-directory: build
+        run: |
+          "C:\Program Files (x86)\NSIS\makensis.exe" q4os-imager.nsi
+
+      - name: Upload installer artifact
+        id: upload-unsigned
+        uses: actions/upload-artifact@v4
+        with:
+          name: q4os-imager-windows-installer
+          path: build/imager-*.exe
+          if-no-files-found: error
+
+      # code signing via signpath.org - inert until the SignPath onboarding
+      # is complete and the repo variable/secret below are configured;
+      # release-signing requests are approved manually in the SignPath UI
+      - name: Submit SignPath signing request
+        id: signpath
+        if: ${{ vars.SIGNPATH_ORGANIZATION_ID != '' }}
+        uses: signpath/github-action-submit-signing-request@v2
+        with:
+          api-token: ${{ secrets.SIGNPATH_API_TOKEN }}
+          organization-id: ${{ vars.SIGNPATH_ORGANIZATION_ID }}
+          project-slug: ${{ vars.SIGNPATH_PROJECT_SLUG }}
+          signing-policy-slug: ${{ startsWith(github.ref, 'refs/tags/') && 'release-signing' || 'test-signing' }}
+          github-artifact-id: ${{ steps.upload-unsigned.outputs.artifact-id }}
+          wait-for-completion: true
+          output-artifact-directory: signed
+
+      - name: Upload signed installer
+        if: ${{ vars.SIGNPATH_ORGANIZATION_ID != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: q4os-imager-windows-installer-signed
+          path: signed/imager-*.exe
+          if-no-files-found: error
