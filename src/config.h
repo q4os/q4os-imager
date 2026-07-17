@@ -15,7 +15,6 @@
 
 /* Phone home the name of images downloaded for image popularity ranking */
 #define TELEMETRY_URL                     "https://q4os.org/touch/.tst_rpimgr"
-//#define TELEMETRY_ENABLED_DEFAULT         false
 
 /* Hash algorithm for verifying (uncompressed image) checksum */
 #define OSLIST_HASH_ALGORITHM             QCryptographicHash::Sha256
