@@ -119,7 +119,7 @@ int main(int argc, char *argv[])
                 }
                 else
                 {
-                    cerr << "Argument ignored because it is not a regular file: " << args[i] << endl;;
+                    cerr << "Argument ignored because it is not a regular file: " << args[i] << endl;
                 }
             }
         }
