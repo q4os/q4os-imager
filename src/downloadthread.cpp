@@ -85,7 +85,7 @@ size_t DownloadThread::_curl_write_callback(char *ptr, size_t size, size_t nmemb
 
 int DownloadThread::_curl_xferinfo_callback(void *userdata, curl_off_t dltotal, curl_off_t dlnow, curl_off_t ultotal, curl_off_t ulnow)
 {
-    return (static_cast<DownloadThread *>(userdata)->_progress(dltotal, dlnow, ultotal, ulnow) == false);
+    return !static_cast<DownloadThread *>(userdata)->_progress(dltotal, dlnow, ultotal, ulnow);
 }
 
 size_t DownloadThread::_curl_header_callback( void *ptr, size_t size, size_t nmemb, void *userdata)
