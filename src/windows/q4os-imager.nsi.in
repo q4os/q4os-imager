@@ -12,8 +12,8 @@
 !define DESCRIPTION "Q4OS Imager"
 !define WEB_SITE "https://q4os.org"
 !define MAIN_APP_EXE "q4os-imager.exe"
-!define INSTALL_TYPE "SetShellVarContext current"
-!define REG_ROOT "HKCU"
+!define INSTALL_TYPE "SetShellVarContext all"
+!define REG_ROOT "HKLM"
 !define REG_APP_PATH "Software\Microsoft\Windows\CurrentVersion\App Paths\${MAIN_APP_EXE}"
 !define UNINSTALL_PATH "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APP_NAME}"
 
@@ -39,13 +39,24 @@ OutFile "${INSTALLER_NAME}"
 BrandingText "${APP_NAME}"
 XPStyle on
 InstallDirRegKey "${REG_ROOT}" "${REG_APP_PATH}" ""
-; Per-user install: the rest of this script is already per-user (HKCU registry root,
-; SetShellVarContext current, app data under $LOCALAPPDATA\Q4OS\Imager - see main.cpp's
-; setOrganizationName/setApplicationName). $PROGRAMFILES requires admin write access and
-; is not requested (no RequestExecutionLevel), so a non-admin run used to silently fail
-; partway through -MainProgram and never reach -Icons_Reg, leaving no Start Menu entry
-; (Q4OS Imager issue #1). Use a path every user can write without elevation instead.
-InstallDir "$LOCALAPPDATA\Q4OS Imager"
+
+; All-users (per-machine) install. History: this used to be a per-user install
+; ($PROGRAMFILES with no elevation request, then later $LOCALAPPDATA with still no
+; elevation request), meant to fix Q4OS Imager issue #1 ("no Start Menu entry when
+; run as a non-admin user"). Real-VM testing of that per-user fix found a deeper
+; problem: Windows' own installer-detection heuristic forces a UAC prompt on this
+; NSIS binary regardless of InstallDir/RequestExecutionLevel content, and when a
+; standard user elevates via a *different* administrator's credentials
+; (over-the-shoulder elevation), SetShellVarContext current/HKCU resolve against
+; that elevating administrator's own profile - not the invoking standard user's -
+; so the per-user fix alone still left the original user with no Start Menu entry.
+; An all-users install closes this structurally: the shortcut, registry keys and
+; install directory are no longer tied to any one user profile, so it doesn't
+; matter which account's credentials were used to elevate. RequestExecutionLevel
+; admin below makes the elevation requirement explicit and predictable instead of
+; depending on Windows' heuristic.
+RequestExecutionLevel admin
+InstallDir "$PROGRAMFILES\Q4OS Imager"
 
 ######################################################################
 
