@@ -17,9 +17,9 @@ class DriveListModel : public QAbstractListModel
     Q_OBJECT
 public:
     DriveListModel(QObject *parent = nullptr);
-    virtual int rowCount(const QModelIndex &) const;
-    virtual QHash<int, QByteArray> roleNames() const;
-    virtual QVariant data(const QModelIndex &index, int role) const;
+    int rowCount(const QModelIndex &) const override;
+    QHash<int, QByteArray> roleNames() const override;
+    QVariant data(const QModelIndex &index, int role) const override;
     void startPolling();
     void stopPolling();
 
