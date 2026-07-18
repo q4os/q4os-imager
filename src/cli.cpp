@@ -28,23 +28,21 @@ Cli::Cli(int &argc, char *argv[]) : QObject(nullptr)
         std::ios::sync_with_stdio();
     }
 #endif
-    _app = new QCoreApplication(argc, argv);
+    _app = std::make_unique<QCoreApplication>(argc, argv);
     _app->setOrganizationName("Q4OS");
     _app->setOrganizationDomain("q4os.org");
     _app->setApplicationName("Imager");
-    _imageWriter = new ImageWriter;
-    connect(_imageWriter, &ImageWriter::success, this, &Cli::onSuccess);
-    connect(_imageWriter, &ImageWriter::error, this, &Cli::onError);
-    connect(_imageWriter, &ImageWriter::preparationStatusUpdate, this, &Cli::onPreparationStatusUpdate);
-    connect(_imageWriter, &ImageWriter::downloadProgress, this, &Cli::onDownloadProgress);
-    connect(_imageWriter, &ImageWriter::verifyProgress, this, &Cli::onVerifyProgress);
+    _imageWriter = std::make_unique<ImageWriter>();
+    connect(_imageWriter.get(), &ImageWriter::success, this, &Cli::onSuccess);
+    connect(_imageWriter.get(), &ImageWriter::error, this, &Cli::onError);
+    connect(_imageWriter.get(), &ImageWriter::preparationStatusUpdate, this, &Cli::onPreparationStatusUpdate);
+    connect(_imageWriter.get(), &ImageWriter::downloadProgress, this, &Cli::onDownloadProgress);
+    connect(_imageWriter.get(), &ImageWriter::verifyProgress, this, &Cli::onVerifyProgress);
 }
 
-Cli::~Cli()
-{
-    delete _imageWriter;
-    delete _app;
-}
+// unique_ptr members clean themselves up in reverse declaration order
+// (_imageWriter, then _app) - same order the explicit deletes used before.
+Cli::~Cli() = default;
 
 int Cli::main()
 {
@@ -223,7 +221,7 @@ int Cli::main()
     _imageWriter->setVerifyEnabled(!parser.isSet(disableVerify));
 
     /* Run startWrite() in event loop (otherwise calling _app->exit() on error does not work) */
-    QTimer::singleShot(1, _imageWriter, &ImageWriter::startWrite);
+    QTimer::singleShot(1, _imageWriter.get(), &ImageWriter::startWrite);
     return _app->exec();
 }
 

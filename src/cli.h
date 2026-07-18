@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QVariant>
+#include <memory>
 
 class ImageWriter;
 class QCoreApplication;
@@ -16,8 +17,10 @@ public:
     int main();
 
 protected:
-    QCoreApplication *_app;
-    ImageWriter *_imageWriter;
+    // unique_ptr of an otherwise-incomplete type is fine here: ~Cli() is
+    // defined out-of-line in cli.cpp, where both types are fully visible.
+    std::unique_ptr<QCoreApplication> _app;
+    std::unique_ptr<ImageWriter> _imageWriter;
     int _lastPercent;
     QByteArray _lastMsg;
     bool _quiet;
