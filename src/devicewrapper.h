@@ -15,12 +15,12 @@ class DeviceWrapperFatPartition;
 
 #ifdef Q_OS_WIN
 #include "windows/winfile.h"
-typedef WinFile DeviceWrapperFile;
+using DeviceWrapperFile = WinFile;
 #elif defined(Q_OS_DARWIN)
 #include "mac/macfile.h"
-typedef MacFile DeviceWrapperFile;
+using DeviceWrapperFile = MacFile;
 #else
-typedef QFile DeviceWrapperFile;
+using DeviceWrapperFile = QFile;
 #endif
 
 

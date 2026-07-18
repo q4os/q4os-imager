@@ -12,8 +12,8 @@ class NetworkManagerApi : public WlanCredentials
 {
 public:
     NetworkManagerApi();
-    virtual QByteArray getSSID();
-    virtual QByteArray getPSK();
+    QByteArray getSSID() override;
+    QByteArray getPSK() override;
 
 protected:
     QByteArray _getSSIDofInterface(const QByteArray &iface);

@@ -11,8 +11,8 @@
 class MacWlanCredentials : public WlanCredentials
 {
 public:
-    virtual QByteArray getSSID();
-    virtual QByteArray getPSK();
+    QByteArray getSSID() override;
+    QByteArray getPSK() override;
 
 protected:
     QByteArray _ssid;

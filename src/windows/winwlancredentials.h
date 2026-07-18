@@ -12,8 +12,8 @@ class WinWlanCredentials : public WlanCredentials
 {
 public:
     WinWlanCredentials();
-    virtual QByteArray getSSID();
-    virtual QByteArray getPSK();
+    QByteArray getSSID() override;
+    QByteArray getPSK() override;
 
 protected:
     QByteArray _ssid, _psk;
