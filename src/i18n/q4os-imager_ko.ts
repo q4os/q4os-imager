@@ -78,9 +78,18 @@
         <translation>MBR을 zero&apos;ing out 하는 동안 쓰기 오류 발생 </translation>
     </message>
     <message>
-        <location filename="../downloadthread.cpp" line="813"/>
+        <location filename="../downloadthread.cpp" line="834"/>
+        <source>Error reading from storage.&lt;br&gt;The storage device may be broken.</source>
+        <translation>저장소에서 읽는 동안 오류가 발생했습니다.&lt;br&gt;저장 장치가 고장 났을 수 있습니다.</translation>
+    </message>
+    <message>
+        <location filename="../downloadthread.cpp" line="853"/>
+        <source>Verifying write failed. Contents of the storage device differ from what was written to it.</source>
+        <translation>쓰기 확인에 실패했습니다. 저장 장치의 내용이 기록된 내용과 다릅니다.</translation>
+    </message>
+    <message>
         <source>Error reading from storage.&lt;br&gt;SD card may be broken.</source>
-        <translation>저장소에서 읽는 동안 오류가 발생했습니다.&lt;br&gt;SD 카드가 고장 났을 수 있습니다.</translation>
+        <translation type="vanished">저장소에서 읽는 동안 오류가 발생했습니다.&lt;br&gt;SD 카드가 고장 났을 수 있습니다.</translation>
     </message>
     <message>
         <source>Waiting for FAT partition to be mounted</source>
@@ -99,7 +108,7 @@
         <translation type="vanished">지정할 수 없습니다. 파일이 &apos;%1&apos; 존재하지 않습니다.</translation>
     </message>
     <message>
-        <location filename="../downloadthread.cpp" line="885"/>
+        <location filename="../downloadthread.cpp" line="906"/>
         <source>Customizing image</source>
         <translation>이미지 사용자 정의</translation>
     </message>
@@ -124,39 +133,39 @@
         <translation type="vanished">FAT 파티션에 cmdline.txt 쓰던 중 오류 발생</translation>
     </message>
     <message>
-        <location filename="../downloadthread.cpp" line="451"/>
+        <location filename="../downloadthread.cpp" line="460"/>
         <source>Access denied error while writing file to disk.</source>
         <translation>디스크에 파일을 쓰는 동안 액세스 거부 오류가 발생했습니다.</translation>
     </message>
     <message>
-        <location filename="../downloadthread.cpp" line="456"/>
+        <location filename="../downloadthread.cpp" line="465"/>
         <source>Controlled Folder Access seems to be enabled. Please add both q4os-imager.exe and fat32format.exe to the list of allowed apps and try again.</source>
         <translation>제어된 폴더 액세스가 설정된 것 같습니다. q4os-imager.exe 및 fat32format.exe를 허용된 앱 리스트에서 추가하고 다시 시도하십시오.</translation>
     </message>
     <message>
-        <location filename="../downloadthread.cpp" line="463"/>
+        <location filename="../downloadthread.cpp" line="472"/>
         <source>Error writing file to disk</source>
         <translation>디스크에 파일 쓰기 오류</translation>
     </message>
     <message>
-        <location filename="../downloadthread.cpp" line="482"/>
+        <location filename="../downloadthread.cpp" line="491"/>
         <source>Error downloading: %1</source>
         <translation>다운로드 중 오류: %1</translation>
     </message>
     <message>
-        <location filename="../downloadthread.cpp" line="705"/>
-        <location filename="../downloadthread.cpp" line="757"/>
+        <location filename="../downloadthread.cpp" line="717"/>
+        <location filename="../downloadthread.cpp" line="769"/>
         <source>Error writing to storage (while flushing)</source>
         <translation>저장소에 쓰는 중 오류 발생(flushing..)</translation>
     </message>
     <message>
-        <location filename="../downloadthread.cpp" line="712"/>
-        <location filename="../downloadthread.cpp" line="764"/>
+        <location filename="../downloadthread.cpp" line="724"/>
+        <location filename="../downloadthread.cpp" line="776"/>
         <source>Error writing to storage (while fsync)</source>
         <translation>스토리지에 쓰는 중 오류 발생(fsync..)</translation>
     </message>
     <message>
-        <location filename="../downloadthread.cpp" line="693"/>
+        <location filename="../downloadthread.cpp" line="705"/>
         <source>Download corrupt. Hash does not match</source>
         <translation>다운로드가 손상되었습니다. 해시가 일치하지 않습니다.</translation>
     </message>
@@ -176,19 +185,18 @@
         <translation>SD card의 마지막 부분을 비워내는 동안 오류가 발생했습니다.&lt;br&gt;카드가 잘못된 용량을 표기하고 있을 수 있습니다(위조 품목).</translation>
     </message>
     <message>
-        <location filename="../downloadthread.cpp" line="408"/>
+        <location filename="../downloadthread.cpp" line="417"/>
         <source>starting download</source>
         <translation>다운로드 시작</translation>
     </message>
     <message>
-        <location filename="../downloadthread.cpp" line="747"/>
+        <location filename="../downloadthread.cpp" line="759"/>
         <source>Error writing first block (partition table)</source>
         <translation>첫 번째 블록을 쓰는 중 오류 발생 (파티션 테이블)</translation>
     </message>
     <message>
-        <location filename="../downloadthread.cpp" line="832"/>
         <source>Verifying write failed. Contents of SD card is different from what was written to it.</source>
-        <translation>쓰기를 확인하지 못했습니다. SD카드 내용과 쓰인 내용이 다릅니다.</translation>
+        <translation type="vanished">쓰기를 확인하지 못했습니다. SD카드 내용과 쓰인 내용이 다릅니다.</translation>
     </message>
 </context>
 <context>
@@ -264,17 +272,17 @@
         <translation>입력 파일이 올바른 디스크 이미지가 아닙니다.&lt;br&gt;파일사이즈 %1 바이트가 512바이트의 배수가 아닙니다.</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="442"/>
+        <location filename="../imagewriter.cpp" line="443"/>
         <source>Downloading and writing image</source>
         <translation>이미지 다운로드 및 쓰기</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="575"/>
+        <location filename="../imagewriter.cpp" line="576"/>
         <source>Select image</source>
         <translation>이미지 선택하기</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="864"/>
+        <location filename="../imagewriter.cpp" line="865"/>
         <source>Would you like to prefill the wifi password from the system keychain?</source>
         <translation>wifi password를 미리 입력하시겠습니까?</translation>
     </message>
@@ -473,22 +481,22 @@
         <translation>이전에 저장한 이미지 사용자 지정 설정을 적용하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../UseSavedSettingsPopup.qml" line="96"/>
+        <location filename="../UseSavedSettingsPopup.qml" line="97"/>
         <source>NO</source>
         <translation>아니요</translation>
     </message>
     <message>
-        <location filename="../UseSavedSettingsPopup.qml" line="106"/>
+        <location filename="../UseSavedSettingsPopup.qml" line="107"/>
         <source>NO, CLEAR SETTINGS</source>
         <translation>아니요, 설정 지우기</translation>
     </message>
     <message>
-        <location filename="../UseSavedSettingsPopup.qml" line="116"/>
+        <location filename="../UseSavedSettingsPopup.qml" line="117"/>
         <source>YES</source>
         <translation>예</translation>
     </message>
     <message>
-        <location filename="../UseSavedSettingsPopup.qml" line="126"/>
+        <location filename="../UseSavedSettingsPopup.qml" line="127"/>
         <source>EDIT SETTINGS</source>
         <translation>설정을 편집하기</translation>
     </message>
@@ -502,7 +510,7 @@
     </message>
     <message>
         <location filename="../main.qml" line="99"/>
-        <location filename="../main.qml" line="399"/>
+        <location filename="../main.qml" line="403"/>
         <source>Operating System</source>
         <translation>운영체제</translation>
     </message>
@@ -518,13 +526,13 @@
     </message>
     <message>
         <location filename="../main.qml" line="135"/>
-        <location filename="../main.qml" line="713"/>
+        <location filename="../main.qml" line="717"/>
         <source>Storage</source>
         <translation>저장소</translation>
     </message>
     <message>
         <location filename="../main.qml" line="147"/>
-        <location filename="../main.qml" line="1041"/>
+        <location filename="../main.qml" line="1045"/>
         <source>CHOOSE STORAGE</source>
         <translation>저장소 선택</translation>
     </message>
@@ -545,7 +553,7 @@
     </message>
     <message>
         <location filename="../main.qml" line="221"/>
-        <location filename="../main.qml" line="968"/>
+        <location filename="../main.qml" line="972"/>
         <source>Cancelling...</source>
         <translation>취소 하는 중...</translation>
     </message>
@@ -556,59 +564,74 @@
     </message>
     <message>
         <location filename="../main.qml" line="232"/>
-        <location filename="../main.qml" line="991"/>
-        <location filename="../main.qml" line="1060"/>
+        <location filename="../main.qml" line="995"/>
+        <location filename="../main.qml" line="1064"/>
         <source>Finalizing...</source>
         <translation>마무리 중...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="247"/>
+        <location filename="../main.qml" line="251"/>
         <source>Select this button to access advanced settings</source>
         <translation>고급 설정에 액세스하려면 버튼을 선택합니다.</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="261"/>
+        <location filename="../main.qml" line="265"/>
         <source>Using custom repository: %1</source>
         <translation>사용자 지정 리포지토리 사용: %1</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="270"/>
+        <location filename="../main.qml" line="274"/>
         <source>Keyboard navigation: &lt;tab&gt; navigate to next button &lt;space&gt; press button/select item &lt;arrow up/down&gt; go up/down in lists</source>
         <translation>키보드 탐색: &lt;tab&gt; 다음 버튼으로 이동 &lt;space&gt; 버튼 선택 및 항목 선택 &lt;arrow up/down&gt; 목록에서 위아래로 이동</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="290"/>
+        <location filename="../main.qml" line="294"/>
         <source>Language: </source>
         <translation>언어: </translation>
     </message>
     <message>
-        <location filename="../main.qml" line="313"/>
+        <location filename="../main.qml" line="317"/>
         <source>Keyboard: </source>
         <translation>키보드: </translation>
     </message>
     <message>
-        <location filename="../main.qml" line="505"/>
-        <location filename="../main.qml" line="1025"/>
+        <location filename="../main.qml" line="509"/>
+        <location filename="../main.qml" line="1029"/>
         <source>Erase</source>
         <translation>삭제</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="506"/>
+        <location filename="../main.qml" line="510"/>
         <source>Format card as FAT32</source>
         <translation>FAT32로 카드 형식 지정</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="515"/>
+        <location filename="../main.qml" line="519"/>
         <source>Use custom</source>
         <translation>사용자 정의 사용</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="516"/>
+        <location filename="../main.qml" line="520"/>
         <source>Select a custom .img from your computer</source>
         <translation>컴퓨터에서 사용자 지정 .img를 선택합니다.</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="461"/>
+        <location filename="../main.qml" line="1030"/>
+        <source>&lt;b&gt;%1&lt;/b&gt; has been erased&lt;br&gt;&lt;br&gt;You can now remove the storage device</source>
+        <translation>&lt;b&gt;%1&lt;/b&gt;가 지워졌습니다.&lt;br&gt;&lt;br&gt;이제 저장 장치를 제거할 수 있습니다.</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="1037"/>
+        <source>&lt;b&gt;%1&lt;/b&gt; has been written to &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;&lt;br&gt;You can now remove the storage device</source>
+        <translation>&lt;b&gt;%1&lt;/b&gt;가 &lt;b&gt;%2&lt;/b&gt;에 기록되었습니다.&lt;br&gt;&lt;br&gt;이제 저장 장치를 제거할 수 있습니다.</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="1294"/>
+        <source>Storage device is write protected.&lt;br&gt;If it has a physical lock switch, make sure it is unlocked, and try again.</source>
+        <translation>저장 장치가 쓰기 방지되어 있습니다.&lt;br&gt;물리적인 잠금 스위치가 있는 경우 잠금이 해제되어 있는지 확인한 후 다시 시도하십시오.</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="465"/>
         <source>Back</source>
         <translation>뒤로 가기</translation>
     </message>
@@ -618,135 +641,132 @@
         <translation>저장 디바이스를 변경하려면 버튼을 선택합니다.</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="462"/>
+        <location filename="../main.qml" line="466"/>
         <source>Go back to main menu</source>
         <translation>기본 메뉴로 돌아가기</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="628"/>
+        <location filename="../main.qml" line="632"/>
         <source>Released: %1</source>
         <translation>릴리즈: %1</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="638"/>
+        <location filename="../main.qml" line="642"/>
         <source>Cached on your computer</source>
         <translation>컴퓨터에 캐시됨</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="640"/>
+        <location filename="../main.qml" line="644"/>
         <source>Local file</source>
         <translation>로컬 파일</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="641"/>
+        <location filename="../main.qml" line="645"/>
         <source>Online - %1 GB download</source>
         <translation>온라인 - %1 GB 다운로드</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="766"/>
-        <location filename="../main.qml" line="818"/>
-        <location filename="../main.qml" line="824"/>
+        <location filename="../main.qml" line="770"/>
+        <location filename="../main.qml" line="822"/>
+        <location filename="../main.qml" line="828"/>
         <source>Mounted as %1</source>
         <translation>%1로 마운트</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="820"/>
+        <location filename="../main.qml" line="824"/>
         <source>[WRITE PROTECTED]</source>
         <translation>[쓰기 보호됨]</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="862"/>
+        <location filename="../main.qml" line="866"/>
         <source>Are you sure you want to quit?</source>
         <translation>정말 그만두시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="863"/>
+        <location filename="../main.qml" line="867"/>
         <source>Q4OS Imager is still busy.&lt;br&gt;Are you sure you want to quit?</source>
         <translation>Q4OS Imager가 사용 중입니다.&lt;br&gt;정말 그만두시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="874"/>
+        <location filename="../main.qml" line="878"/>
         <source>Warning</source>
         <translation>주의</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="882"/>
+        <location filename="../main.qml" line="886"/>
         <source>Preparing to write...</source>
         <translation>쓰기 준비 중...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="906"/>
+        <location filename="../main.qml" line="910"/>
         <source>Update available</source>
         <translation>업데이트 가능</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="907"/>
+        <location filename="../main.qml" line="911"/>
         <source>There is a newer version of Imager available.&lt;br&gt;Would you like to visit the website to download it?</source>
         <translation>Q4OS Imager의 최신 버전을 사용할 수 있습니다.&lt;br&gt;다운받기 위해 웹사이트를 방문하시겠습니까??</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="971"/>
+        <location filename="../main.qml" line="975"/>
         <source>Writing... %1%</source>
         <translation>쓰는 중... %1%</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="895"/>
+        <location filename="../main.qml" line="899"/>
         <source>All existing data on &apos;%1&apos; will be erased.&lt;br&gt;Are you sure you want to continue?</source>
         <translation>&apos;%1&apos;에 존재하는 모든 데이터가 지워집니다.&lt;br&gt;계속하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="950"/>
+        <location filename="../main.qml" line="954"/>
         <source>Error downloading OS list from Internet</source>
         <translation>인터넷에서 OS 목록을 다운로드하는 중 오류 발생</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="994"/>
+        <location filename="../main.qml" line="998"/>
         <source>Verifying... %1%</source>
         <translation>확인 중... %1%</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1001"/>
+        <location filename="../main.qml" line="1005"/>
         <source>Preparing to write... (%1)</source>
         <translation>쓰기 준비 중... (%1)</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1017"/>
+        <location filename="../main.qml" line="1021"/>
         <source>Error</source>
         <translation>오류</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1024"/>
+        <location filename="../main.qml" line="1028"/>
         <source>Write Successful</source>
         <translation>쓰기 완료</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1026"/>
         <source>&lt;b&gt;%1&lt;/b&gt; has been erased&lt;br&gt;&lt;br&gt;You can now remove the SD card from the reader</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; 가 지워졌습니다.&lt;br&gt;&lt;br&gt;이제 SD card를 제거할 수 있습니다.</translation>
+        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; 가 지워졌습니다.&lt;br&gt;&lt;br&gt;이제 SD card를 제거할 수 있습니다.</translation>
     </message>
     <message>
         <source>&lt;b&gt;%1&lt;/b&gt; has been written to &lt;b&gt;%2&lt;/b&gt;</source>
         <translation type="vanished">&lt;b&gt;%1&lt;/b&gt;가 &lt;b&gt;%2&lt;/b&gt;에 쓰여졌습니다.</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1033"/>
         <source>&lt;b&gt;%1&lt;/b&gt; has been written to &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;&lt;br&gt;You can now remove the SD card from the reader</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt;가 &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;&lt;br&gt;에 쓰여졌습니다. 이제 SD card를 제거할 수 있습니다.</translation>
+        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt;가 &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;&lt;br&gt;에 쓰여졌습니다. 이제 SD card를 제거할 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1101"/>
+        <location filename="../main.qml" line="1105"/>
         <source>Error parsing os_list.json</source>
         <translation>구문 분석 오류 os_list.json</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1274"/>
+        <location filename="../main.qml" line="1278"/>
         <source>Connect an USB stick containing images first.&lt;br&gt;The images must be located in the root folder of the USB stick.</source>
         <translation>먼저 이미지가 들어 있는 USB를 연결합니다.&lt;br&gt;이미지는 USB 루트 폴더에 있어야 합니다.</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1290"/>
         <source>SD card is write protected.&lt;br&gt;Push the lock switch on the left side of the card upwards, and try again.</source>
-        <translation>쓰기 금지된 SD card&lt;br&gt;카드 왼쪽에 있는 잠금 스위치를 위쪽으로 누른 후 다시 시도하십시오.</translation>
+        <translation type="vanished">쓰기 금지된 SD card&lt;br&gt;카드 왼쪽에 있는 잠금 스위치를 위쪽으로 누른 후 다시 시도하십시오.</translation>
     </message>
 </context>
 </TS>
