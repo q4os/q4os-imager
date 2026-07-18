@@ -51,10 +51,10 @@ QByteArray MacWlanCredentials::getPSK()
     {
         UInt32 resultLen;
         void *result;
-        if (SecKeychainFindGenericPassword(keychainRef, 0, NULL, _ssid.length(), _ssid.constData(), &resultLen, &result, NULL) == errSecSuccess)
+        if (SecKeychainFindGenericPassword(keychainRef, 0, nullptr, _ssid.length(), _ssid.constData(), &resultLen, &result, nullptr) == errSecSuccess)
         {
             psk = QByteArray((char *) result, resultLen);
-            SecKeychainItemFreeContent(NULL, result);
+            SecKeychainItemFreeContent(nullptr, result);
         }
         CFRelease(keychainRef);
     }
@@ -62,7 +62,7 @@ QByteArray MacWlanCredentials::getPSK()
     return psk;
 }
 
-WlanCredentials *WlanCredentials::_instance = NULL;
+WlanCredentials *WlanCredentials::_instance = nullptr;
 WlanCredentials *WlanCredentials::instance()
 {
     if (!_instance)

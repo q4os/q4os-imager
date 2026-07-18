@@ -137,7 +137,7 @@ void DeviceWrapper::pwrite(const char *buf, quint64 size, quint64 offset)
 
     for (auto i = firstBlock; size; i++)
     {
-        auto block = _blockcache.value(i, NULL);
+        auto block = _blockcache.value(i, nullptr);
         if (!block)
         {
             block = new DeviceWrapperBlockCacheEntry(this);

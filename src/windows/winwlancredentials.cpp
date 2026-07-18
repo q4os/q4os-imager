@@ -15,7 +15,7 @@
 #define WLAN_PROFILE_GET_PLAINTEXT_KEY 4
 #endif
 
-static HINSTANCE hWlanApi = NULL;
+static HINSTANCE hWlanApi = nullptr;
 
 /* Called by dlltool generated delaylib code that is used for lazy loading
    wlanapi.dll */
@@ -26,7 +26,7 @@ FARPROC WINAPI dllDelayNotifyHook(unsigned dliNotify, PDelayLoadInfo)
         return (FARPROC) hWlanApi;
     }
 
-    return NULL;
+    return nullptr;
 }
 
 PfnDliHook __pfnDliNotifyHook2 = dllDelayNotifyHook;
@@ -53,7 +53,7 @@ inline QString unescapeXml(QString str)
 WinWlanCredentials::WinWlanCredentials()
 {
     if (!hWlanApi)
-        hWlanApi = LoadLibraryExA("wlanapi.dll", NULL, LOAD_LIBRARY_SEARCH_SYSTEM32);
+        hWlanApi = LoadLibraryExA("wlanapi.dll", nullptr, LOAD_LIBRARY_SEARCH_SYSTEM32);
     if (!hWlanApi)
     {
         qDebug() << "wlanapi.dll not available";
@@ -65,27 +65,27 @@ WinWlanCredentials::WinWlanCredentials()
     DWORD supportedVersion = 0;
     DWORD clientVersion = 2;
 
-    if (WlanOpenHandle(clientVersion, NULL, &supportedVersion, &h) != ERROR_SUCCESS)
+    if (WlanOpenHandle(clientVersion, nullptr, &supportedVersion, &h) != ERROR_SUCCESS)
         return;
 
-    PWLAN_INTERFACE_INFO_LIST ifList = NULL;
+    PWLAN_INTERFACE_INFO_LIST ifList = nullptr;
 
-    if (WlanEnumInterfaces(h, NULL, &ifList) == ERROR_SUCCESS)
+    if (WlanEnumInterfaces(h, nullptr, &ifList) == ERROR_SUCCESS)
     {
         for (DWORD i=0; i < ifList->dwNumberOfItems; i++)
         {
-            PWLAN_PROFILE_INFO_LIST profileList = NULL;
+            PWLAN_PROFILE_INFO_LIST profileList = nullptr;
 
             if (ifList->InterfaceInfo[i].isState != wlan_interface_state_connected)
                 continue; /* Wlan adapter not connected */
 
             /* Get current connection info for SSID */
-            PWLAN_CONNECTION_ATTRIBUTES pConnectInfo = NULL;
+            PWLAN_CONNECTION_ATTRIBUTES pConnectInfo = nullptr;
             DWORD connectInfoSize = sizeof(WLAN_CONNECTION_ATTRIBUTES);
             WLAN_OPCODE_VALUE_TYPE opCode = wlan_opcode_value_type_invalid;
 
             if (WlanQueryInterface(h, &ifList->InterfaceInfo[i].InterfaceGuid,
-                               wlan_intf_opcode_current_connection, NULL,
+                               wlan_intf_opcode_current_connection, nullptr,
                                &connectInfoSize, (PVOID *) &pConnectInfo, &opCode) != ERROR_SUCCESS || !pConnectInfo)
             {
                 continue;
@@ -102,7 +102,7 @@ WinWlanCredentials::WinWlanCredentials()
                 continue;
 
             if (WlanGetProfileList(h, &ifList->InterfaceInfo[i].InterfaceGuid,
-                                   NULL, &profileList) == ERROR_SUCCESS)
+                                   nullptr, &profileList) == ERROR_SUCCESS)
             {
                 for (DWORD j=0; j < profileList->dwNumberOfItems; j++)
                 {
@@ -113,10 +113,10 @@ WinWlanCredentials::WinWlanCredentials()
                         DWORD flags = WLAN_PROFILE_GET_PLAINTEXT_KEY;
                         DWORD access = 0;
                         DWORD ret = 0;
-                        LPWSTR xmlstr = NULL;
+                        LPWSTR xmlstr = nullptr;
 
                         if ( (ret = WlanGetProfile(h, &ifList->InterfaceInfo[i].InterfaceGuid, profileList->ProfileInfo[j].strProfileName,
-                                          NULL, &xmlstr, &flags, &access)) == ERROR_SUCCESS && xmlstr)
+                                          nullptr, &xmlstr, &flags, &access)) == ERROR_SUCCESS && xmlstr)
                         {
                             QString xml = QString::fromWCharArray(xmlstr);
                             qDebug() << "XML wlan profile:" << xml;
@@ -142,7 +142,7 @@ WinWlanCredentials::WinWlanCredentials()
 
     if (ifList)
         WlanFreeMemory(ifList);
-    WlanCloseHandle(h, NULL);
+    WlanCloseHandle(h, nullptr);
 }
 
 QByteArray WinWlanCredentials::getSSID()
@@ -155,7 +155,7 @@ QByteArray WinWlanCredentials::getPSK()
     return _psk;
 }
 
-WlanCredentials *WlanCredentials::_instance = NULL;
+WlanCredentials *WlanCredentials::_instance = nullptr;
 WlanCredentials *WlanCredentials::instance()
 {
     if (!_instance)

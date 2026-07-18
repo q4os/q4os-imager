@@ -30,7 +30,7 @@ bool WinFile::open(QIODevice::OpenMode)
 
     for (int attempt = 0; attempt < 20; attempt++)
     {
-        _h = CreateFileA(n.data(), GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL | FILE_FLAG_SEQUENTIAL_SCAN, NULL);
+        _h = CreateFileA(n.data(), GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ, nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL | FILE_FLAG_SEQUENTIAL_SCAN, nullptr);
         if (_h != INVALID_HANDLE_VALUE)
             break;
 
@@ -40,7 +40,7 @@ bool WinFile::open(QIODevice::OpenMode)
 
     // Try with FILE_SHARE_WRITE
     if (_h == INVALID_HANDLE_VALUE)
-        _h = CreateFileA(n.data(), GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+        _h = CreateFileA(n.data(), GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
 
     if (_h == INVALID_HANDLE_VALUE)
     {
@@ -79,7 +79,7 @@ qint64 WinFile::write(const char *data, qint64 maxSize)
     if (maxSize % 512)
         qDebug() << "write: NOT SECTOR ALIGNED";
 
-    if (!WriteFile(_h, data, maxSize, &bytesWritten, NULL))
+    if (!WriteFile(_h, data, maxSize, &bytesWritten, nullptr))
     {
         _lasterrorcode = GetLastError();
         _lasterror = qt_error_string();
@@ -93,7 +93,7 @@ qint64 WinFile::read(char *data, qint64 maxSize)
 {
     DWORD bytesRead;
 
-    if (!ReadFile(_h, data, maxSize, &bytesRead, NULL))
+    if (!ReadFile(_h, data, maxSize, &bytesRead, nullptr))
     {
         _lasterrorcode = GetLastError();
         _lasterror = qt_error_string();
@@ -164,12 +164,12 @@ bool WinFile::flush()
 bool WinFile::lockVolume()
 {
     DWORD bytesRet;
-    DeviceIoControl(_h, FSCTL_ALLOW_EXTENDED_DASD_IO, NULL, 0, NULL, 0, &bytesRet, NULL);
+    DeviceIoControl(_h, FSCTL_ALLOW_EXTENDED_DASD_IO, nullptr, 0, nullptr, 0, &bytesRet, nullptr);
     for (int attempt = 0; attempt < 20; attempt++)
     {
         qDebug() << "Locking volume" << _name;
 
-        if (DeviceIoControl(_h, FSCTL_LOCK_VOLUME, NULL, 0, NULL, 0, &bytesRet, NULL))
+        if (DeviceIoControl(_h, FSCTL_LOCK_VOLUME, nullptr, 0, nullptr, 0, &bytesRet, nullptr))
         {
             _locked = true;
             qDebug() << "Locked volume";
@@ -190,7 +190,7 @@ bool WinFile::unlockVolume()
         return true;
 
     DWORD bytesRet;
-    if (DeviceIoControl(_h, FSCTL_UNLOCK_VOLUME, NULL, 0, NULL, 0, &bytesRet, NULL))
+    if (DeviceIoControl(_h, FSCTL_UNLOCK_VOLUME, nullptr, 0, nullptr, 0, &bytesRet, nullptr))
     {
         _locked = false;
         qDebug() << "Unlocked volume";

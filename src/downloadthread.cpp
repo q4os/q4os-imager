@@ -38,7 +38,7 @@ int DownloadThread::_curlCount = 0;
 DownloadThread::DownloadThread(const QByteArray &url, const QByteArray &localfilename, const QByteArray &expectedHash, QObject *parent) :
     QThread(parent), _startOffset(0), _lastDlTotal(0), _lastDlNow(0), _verifyTotal(0), _lastVerifyNow(0), _bytesWritten(0), _lastFailureOffset(0), _sectorsStart(-1), _url(url), _filename(localfilename), _expectedHash(expectedHash),
     _firstBlock(nullptr), _cancelled(false), _successful(false), _verifyEnabled(false), _cacheEnabled(false), _lastModified(0), _serverTime(0),  _lastFailureTime(0),
-    _inputBufferSize(0), _file(NULL), _writehash(OSLIST_HASH_ALGORITHM), _verifyhash(OSLIST_HASH_ALGORITHM)
+    _inputBufferSize(0), _file(nullptr), _writehash(OSLIST_HASH_ALGORITHM), _verifyhash(OSLIST_HASH_ALGORITHM)
 {
     if (!_curlCount)
         curl_global_init(CURL_GLOBAL_DEFAULT);
@@ -91,7 +91,7 @@ int DownloadThread::_curl_xferinfo_callback(void *userdata, curl_off_t dltotal, 
 size_t DownloadThread::_curl_header_callback( void *ptr, size_t size, size_t nmemb, void *userdata)
 {
     int len = size*nmemb;
-    string headerstr((char *) ptr, len);
+    string headerstr(static_cast<char *>(ptr), len);
     static_cast<DownloadThread *>(userdata)->_header(headerstr);
 
     return len;
@@ -423,7 +423,7 @@ void DownloadThread::run()
        And also reconnect if we detect from our end that transfer stalled for more than one minute */
     while (ret == CURLE_PARTIAL_FILE || ret == CURLE_OPERATION_TIMEDOUT || (ret == CURLE_RECV_ERROR && _lastDlNow != _lastFailureOffset) )
     {
-        time_t t = time(NULL);
+        time_t t = time(nullptr);
         qDebug() << "HTTP connection lost. Time:" << t;
 
         /* If last failure happened less than 5 seconds ago, something else may
@@ -554,7 +554,7 @@ size_t DownloadThread::_writeFile(const char *buf, size_t len)
     if (!_firstBlock)
     {
         _writehash.addData(buf, len);
-        _firstBlock = (char *) qMallocAligned(len, 4096);
+        _firstBlock = static_cast<char *>(qMallocAligned(len, 4096));
         _firstBlockSize = len;
         ::memcpy(_firstBlock, buf, len);
 
@@ -569,7 +569,7 @@ size_t DownloadThread::_writeFile(const char *buf, size_t len)
     qint64 written = _file.write(buf, len);
     _bytesWritten += written;
 
-    if ((size_t) written != len)
+    if (static_cast<size_t>(written) != len)
     {
         qDebug() << "Write error:" << _file.errorString() << "while writing len:" << len;
     }
@@ -591,11 +591,11 @@ void DownloadThread::_header(const string &header)
 {
     if (header.compare(0, 6, "Date: ") == 0)
     {
-        _serverTime = curl_getdate(header.data()+6, NULL);
+        _serverTime = curl_getdate(header.data()+6, nullptr);
     }
     else if (header.compare(0, 15, "Last-Modified: ") == 0)
     {
-        _lastModified = curl_getdate(header.data()+15, NULL);
+        _lastModified = curl_getdate(header.data()+15, nullptr);
     }
     qDebug() << "Received header:" << QByteArray(header.c_str()).trimmed();
 }
@@ -667,7 +667,7 @@ uint64_t DownloadThread::verifyTotal()
 uint64_t DownloadThread::bytesWritten()
 {
     if (_sectorsStart != -1)
-        return qMin((uint64_t) (_sectorsWritten()-_sectorsStart)*512, (uint64_t) _bytesWritten);
+        return qMin(static_cast<uint64_t>(_sectorsWritten()-_sectorsStart)*512, static_cast<uint64_t>(_bytesWritten));
     else
         return _bytesWritten;
 }
@@ -803,7 +803,7 @@ void DownloadThread::_writeComplete()
 
 bool DownloadThread::_verify()
 {
-    char *verifyBuf = (char *) qMallocAligned(IMAGEWRITER_VERIFY_BLOCKSIZE, 4096);
+    char *verifyBuf = static_cast<char *>(qMallocAligned(IMAGEWRITER_VERIFY_BLOCKSIZE, 4096));
     _lastVerifyNow = 0;
     _verifyTotal = _file.pos();
     QElapsedTimer t1;
@@ -828,7 +828,7 @@ bool DownloadThread::_verify()
 
     while (_verifyEnabled && _lastVerifyNow < _verifyTotal && !_cancelled)
     {
-        qint64 lenRead = _file.read(verifyBuf, qMin((qint64) IMAGEWRITER_VERIFY_BLOCKSIZE, (qint64) (_verifyTotal-_lastVerifyNow) ));
+        qint64 lenRead = _file.read(verifyBuf, qMin(static_cast<qint64>(IMAGEWRITER_VERIFY_BLOCKSIZE), static_cast<qint64>(_verifyTotal-_lastVerifyNow)));
         if (lenRead == -1)
         {
             DownloadThread::_onDownloadError(tr("Error reading from storage.<br>"

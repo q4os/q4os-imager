@@ -700,7 +700,7 @@ void ImageWriter::onTimeSyncReply(QNetworkReply *reply)
         struct timeval tv = {
             (time_t) dt.toSecsSinceEpoch(), 0
         };
-        ::settimeofday(&tv, NULL);
+        ::settimeofday(&tv, nullptr);
 
         emit networkOnline();
     }

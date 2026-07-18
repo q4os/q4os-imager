@@ -18,7 +18,7 @@ AcceleratedCryptographicHash::AcceleratedCryptographicHash(QCryptographicHash::A
 
 AcceleratedCryptographicHash::~AcceleratedCryptographicHash()
 {
-    gnutls_hash_deinit(_sha256, NULL);
+    gnutls_hash_deinit(_sha256, nullptr);
 }
 
 void AcceleratedCryptographicHash::addData(const char *data, int length)
@@ -35,5 +35,5 @@ QByteArray AcceleratedCryptographicHash::result()
 {
     unsigned char binhash[gnutls_hash_get_len(GNUTLS_DIG_SHA256)];
     gnutls_hash_output(_sha256, binhash);
-    return QByteArray((char *) binhash, sizeof binhash);
+    return QByteArray(reinterpret_cast<const char *>(binhash), sizeof binhash);
 }

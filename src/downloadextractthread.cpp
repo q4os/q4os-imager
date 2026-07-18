@@ -48,8 +48,8 @@ DownloadExtractThread::DownloadExtractThread(const QByteArray &url, const QByteA
       _isImage(true), _inputHash(OSLIST_HASH_ALGORITHM), _activeBuf(0), _writeThreadStarted(false)
 {
     _extractThread = new _extractThreadClass(this);
-    _abuf[0] = (char *) qMallocAligned(_abufsize, 4096);
-    _abuf[1] = (char *) qMallocAligned(_abufsize, 4096);
+    _abuf[0] = static_cast<char *>(qMallocAligned(_abufsize, 4096));
+    _abuf[1] = static_cast<char *>(qMallocAligned(_abufsize, 4096));
 }
 
 DownloadExtractThread::~DownloadExtractThread()
@@ -137,7 +137,7 @@ void DownloadExtractThread::extractImageRun()
     archive_read_support_format_zip(a);
     archive_read_support_format_7zip(a);
     archive_read_support_format_raw(a); // for .gz and such
-    archive_read_open(a, this, NULL, &DownloadExtractThread::_archive_read, &DownloadExtractThread::_archive_close);
+    archive_read_open(a, this, nullptr, &DownloadExtractThread::_archive_read, &DownloadExtractThread::_archive_close);
 
     try
     {
@@ -309,7 +309,7 @@ void DownloadExtractThread::extractMultiFileRun()
     archive_read_support_filter_all(a);
     archive_read_support_format_all(a);
     archive_write_disk_set_options(ext, flags);
-    archive_read_open(a, this, NULL, &DownloadExtractThread::_archive_read, &DownloadExtractThread::_archive_close);
+    archive_read_open(a, this, nullptr, &DownloadExtractThread::_archive_read, &DownloadExtractThread::_archive_close);
 
     try
     {

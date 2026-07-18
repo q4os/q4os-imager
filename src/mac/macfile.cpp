@@ -58,7 +58,7 @@ MacFile::authOpenResult MacFile::authOpen(const QByteArray &filename)
         ::close(stdinpipe[1]);
         ::dup2(pipe[1], STDOUT_FILENO);
         ::dup2(stdinpipe[0], STDIN_FILENO);
-        ::execl(cmd, cmd, "-stdoutpipe", "-extauth", "-o", mode.data(), filename.data(), NULL);
+        ::execl(cmd, cmd, "-stdoutpipe", "-extauth", "-o", mode.data(), filename.data(), nullptr);
         ::exit(-1);
     }
     else

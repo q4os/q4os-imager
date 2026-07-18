@@ -18,7 +18,7 @@
 #include <QDBusReply>
 #endif
 
-typedef QMap<QString, QVariantMap> VariantMapMap;
+using VariantMapMap = QMap<QString, QVariantMap>;
 Q_DECLARE_METATYPE(VariantMapMap)
 
 NetworkManagerApi::NetworkManagerApi()
@@ -105,7 +105,7 @@ QByteArray NetworkManagerApi::getPSK()
     return QByteArray();
 }
 
-WlanCredentials *WlanCredentials::_instance = NULL;
+WlanCredentials *WlanCredentials::_instance = nullptr;
 WlanCredentials *WlanCredentials::instance()
 {
     if (!_instance)
