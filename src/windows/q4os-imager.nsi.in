@@ -39,7 +39,13 @@ OutFile "${INSTALLER_NAME}"
 BrandingText "${APP_NAME}"
 XPStyle on
 InstallDirRegKey "${REG_ROOT}" "${REG_APP_PATH}" ""
-InstallDir "$PROGRAMFILES\Q4OS Imager"
+; Per-user install: the rest of this script is already per-user (HKCU registry root,
+; SetShellVarContext current, app data under $LOCALAPPDATA\Q4OS\Imager - see main.cpp's
+; setOrganizationName/setApplicationName). $PROGRAMFILES requires admin write access and
+; is not requested (no RequestExecutionLevel), so a non-admin run used to silently fail
+; partway through -MainProgram and never reach -Icons_Reg, leaving no Start Menu entry
+; (Q4OS Imager issue #1). Use a path every user can write without elevation instead.
+InstallDir "$LOCALAPPDATA\Q4OS Imager"
 
 ######################################################################
 
