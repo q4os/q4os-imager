@@ -107,6 +107,7 @@ the user.
 Windows binaries are built from the source code in this repository by the public
 GitHub Actions workflow [`.github/workflows/windows.yml`](.github/workflows/windows.yml).
 
+As the project gets some more reputation, we will ask for
 Free code signing provided by [SignPath.io](https://about.signpath.io/),
 certificate by [SignPath Foundation](https://signpath.org/).
 
