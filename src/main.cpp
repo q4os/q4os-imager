@@ -216,7 +216,7 @@ int main(int argc, char *argv[])
         if (CFArrayGetCount(prefLangs))
         {
             char buf[32] = {0};
-            CFStringRef strRef = (CFStringRef) CFArrayGetValueAtIndex(prefLangs, 0);
+            CFStringRef strRef = static_cast<CFStringRef>(CFArrayGetValueAtIndex(prefLangs, 0));
             CFStringGetCString(strRef, buf, sizeof(buf), kCFStringEncodingUTF8);
             langcode = buf;
             langcode.replace('-', '_');

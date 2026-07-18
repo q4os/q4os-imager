@@ -28,7 +28,10 @@ void PowerSaveBlocker::applyBlock(const QString &reason)
     std::wstring wreason = reason.toStdWString();
     rc.Version = POWER_REQUEST_CONTEXT_VERSION;
     rc.Flags = POWER_REQUEST_CONTEXT_SIMPLE_STRING;
-    rc.Reason.SimpleReasonString = (wchar_t *) wreason.c_str();
+    // PowerCreateRequest's REASON_CONTEXT wants a non-const wchar_t*, but never
+    // mutates it - the API just isn't const-correct. const_cast documents that
+    // explicitly instead of hiding it behind an old-style cast.
+    rc.Reason.SimpleReasonString = const_cast<wchar_t *>(wreason.c_str());
     _powerRequest = PowerCreateRequest(&rc);
 
     if (_powerRequest == INVALID_HANDLE_VALUE)

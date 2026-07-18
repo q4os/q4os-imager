@@ -33,5 +33,5 @@ QByteArray AcceleratedCryptographicHash::result()
 {
     unsigned char binhash[SHA256_DIGEST_LENGTH];
     SHA256_Final(binhash, &_sha256);
-    return QByteArray((char *) binhash, sizeof binhash);
+    return QByteArray(reinterpret_cast<const char *>(binhash), sizeof binhash);
 }

@@ -9,7 +9,7 @@
 LocalFileExtractThread::LocalFileExtractThread(const QByteArray &url, const QByteArray &dst, const QByteArray &expectedHash, QObject *parent)
     : DownloadExtractThread(url, dst, expectedHash, parent)
 {
-    _inputBuf = (char *) qMallocAligned(IMAGEWRITER_UNCOMPRESSED_BLOCKSIZE, 4096);
+    _inputBuf = static_cast<char *>(qMallocAligned(IMAGEWRITER_UNCOMPRESSED_BLOCKSIZE, 4096));
 }
 
 LocalFileExtractThread::~LocalFileExtractThread()
