@@ -15,4 +15,11 @@ Button {
     Accessible.onPressAction: clicked()
     Keys.onEnterPressed: clicked()
     Keys.onReturnPressed: clicked()
+
+    MouseArea {
+        anchors.fill: parent
+        acceptedButtons: Qt.NoButton
+        hoverEnabled: true
+        cursorShape: parent.enabled ? Qt.PointingHandCursor : Qt.ArrowCursor
+    }
 }

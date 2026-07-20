@@ -28,6 +28,8 @@
         <file>icons/ic_info_12px.png</file>
         <file>keymap-layouts.txt</file>
         <file>icons/ic_cog_red.svg</file>
+        <file>icons/ic_heart_idle.svg</file>
+        <file>icons/ic_heart_hover.svg</file>
         <file>icons/cat_home_automation.png</file>
         <file>icons/cat_language_specific_operating_systems.png</file>
         <file>icons/cat_3d_printing.png</file>

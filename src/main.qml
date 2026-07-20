@@ -239,18 +239,23 @@ ApplicationWindow {
                     ImButton {
                         Layout.bottomMargin: 25
                         padding: 5
-                        id: customizebutton
+                        id: donatebutton
                         onClicked: {
-                            optionspopup.openPopup()
+                            Qt.openUrlExternally("https://www.q4os.org/dnt_donate.html")
                         }
-                        visible: false
-                        //hide the advanced settings button
-                        enabled: false
-                        opacity: 0
-                        focusPolicy: Qt.NoFocus
-                        Accessible.description: qsTr("Select this button to access advanced settings")
+                        visible: true
+                        hoverEnabled: true
+                        ToolTip.visible: hovered
+                        ToolTip.delay: 1000
+                        ToolTip.text: qsTr("Donate to Q4OS. Help us develop the perfect operating system for everyday use.")
+                        Accessible.description: qsTr("Select this button to donate to Q4OS")
+                        background: Rectangle {
+                            color: "transparent"
+                            border.color: "#bd7359"
+                            border.width: donatebutton.hovered ? 3 : 0
+                        }
                         contentItem: Image {
-                            source: "icons/ic_cog_red.svg"
+                            source: donatebutton.hovered ? "icons/ic_heart_hover.svg" : "icons/ic_heart_idle.svg"
                             fillMode: Image.PreserveAspectFit
                         }
                     }
@@ -879,7 +884,7 @@ ApplicationWindow {
         onYes: {
             langbar.visible = false
             writebutton.enabled = false
-            customizebutton.visible = false
+            donatebutton.visible = false
             cancelwritebutton.enabled = true
             cancelwritebutton.visible = true
             cancelverifybutton.enabled = true
@@ -1008,7 +1013,7 @@ ApplicationWindow {
     function resetWriteButton() {
         progressText.visible = false
         progressBar.visible = false
-        customizebutton.visible = imageWriter.imageSupportsCustomization()
+        donatebutton.visible = true
         osbutton.enabled = true
         dstbutton.enabled = true
         writebutton.visible = true
@@ -1053,7 +1058,6 @@ ApplicationWindow {
         if (imageWriter.readyToWrite()) {
             writebutton.enabled = true
         }
-        customizebutton.visible = imageWriter.imageSupportsCustomization()
     }
 
     function onCancelled() {
@@ -1285,7 +1289,6 @@ ApplicationWindow {
             if (imageWriter.readyToWrite()) {
                 writebutton.enabled = true
             }
-            customizebutton.visible = imageWriter.imageSupportsCustomization()
         }
     }
 
