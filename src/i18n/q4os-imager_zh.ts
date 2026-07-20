@@ -525,13 +525,13 @@
         <location filename="../main.qml" line="135"/>
         <location filename="../main.qml" line="717"/>
         <source>Storage</source>
-        <translation>储存卡</translation>
+        <translation>存储设备</translation>
     </message>
     <message>
         <location filename="../main.qml" line="147"/>
         <location filename="../main.qml" line="1045"/>
         <source>CHOOSE STORAGE</source>
-        <translation>选择SD卡</translation>
+        <translation>选择存储设备</translation>
     </message>
     <message>
         <location filename="../main.qml" line="157"/>

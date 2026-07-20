@@ -538,13 +538,13 @@ Controlled Folder Access scheint aktiviert zu sein. Bitte fügen Sie sowohl q4os
         <location filename="../main.qml" line="135"/>
         <location filename="../main.qml" line="717"/>
         <source>Storage</source>
-        <translation>SD-Karte</translation>
+        <translation>Speichermedium</translation>
     </message>
     <message>
         <location filename="../main.qml" line="147"/>
         <location filename="../main.qml" line="1045"/>
         <source>CHOOSE STORAGE</source>
-        <translation>SD-KARTE WÄHLEN</translation>
+        <translation>SPEICHER WÄHLEN</translation>
     </message>
     <message>
         <source>Select this button to change the destination SD card</source>

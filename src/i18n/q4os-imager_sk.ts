@@ -541,13 +541,13 @@
         <location filename="../main.qml" line="135"/>
         <location filename="../main.qml" line="717"/>
         <source>Storage</source>
-        <translation>SD karta</translation>
+        <translation>Úložné zariadenie</translation>
     </message>
     <message>
         <location filename="../main.qml" line="147"/>
         <location filename="../main.qml" line="1045"/>
         <source>CHOOSE STORAGE</source>
-        <translation>VYBERTE SD KARTU</translation>
+        <translation>VYBERTE ÚLOŽISKO</translation>
     </message>
     <message>
         <location filename="../main.qml" line="173"/>

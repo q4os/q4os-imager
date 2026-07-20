@@ -536,7 +536,7 @@
         <location filename="../main.qml" line="135"/>
         <location filename="../main.qml" line="717"/>
         <source>Storage</source>
-        <translation>SD kartica ali USB disk</translation>
+        <translation>Disk</translation>
     </message>
     <message>
         <location filename="../main.qml" line="147"/>

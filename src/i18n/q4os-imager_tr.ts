@@ -492,13 +492,13 @@
         <location filename="../main.qml" line="135"/>
         <location filename="../main.qml" line="717"/>
         <source>Storage</source>
-        <translation>SD Kart</translation>
+        <translation>Depolama</translation>
     </message>
     <message>
         <location filename="../main.qml" line="147"/>
         <location filename="../main.qml" line="1045"/>
         <source>CHOOSE STORAGE</source>
-        <translation>SD KART SEÇİN</translation>
+        <translation>DEPOLAMA SEÇİN</translation>
     </message>
     <message>
         <source>Select this button to change the destination SD card</source>

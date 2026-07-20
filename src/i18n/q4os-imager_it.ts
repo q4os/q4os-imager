@@ -537,13 +537,13 @@ Aggiungi sia &apos;q4os-imager.exe&apos; che &apos;fat32format.exe&apos; all&apo
         <location filename="../main.qml" line="135"/>
         <location filename="../main.qml" line="717"/>
         <source>Storage</source>
-        <translation>Scheda SD</translation>
+        <translation>Archiviazione</translation>
     </message>
     <message>
         <location filename="../main.qml" line="147"/>
         <location filename="../main.qml" line="1045"/>
         <source>CHOOSE STORAGE</source>
-        <translation>SCEGLI SCHEDA SD</translation>
+        <translation>SCEGLI ARCHIVIAZIONE</translation>
     </message>
     <message>
         <source>Select this button to change the destination SD card</source>
