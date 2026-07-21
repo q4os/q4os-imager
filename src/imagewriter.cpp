@@ -149,7 +149,17 @@ ImageWriter::ImageWriter(QObject *parent)
 
     for (const QString &tf : transFiles)
     {
-        QString langcode = tf.mid(11, tf.length()-14);
+        /* Filenames are "q4os-imager_<langcode>.qm" (a 12-char prefix,
+           ".qm" a 3-char suffix). This was "rpi-imager_<langcode>.qm" (an
+           11-char prefix) upstream; when the project was rebranded to
+           "q4os-imager" - one character longer - these offsets were not
+           updated, so langcode picked up a stray leading "_" (e.g. "_de"
+           instead of "de"). That made every lookup below fail silently:
+           QLocale("_de").nativeLanguageName() falls back to the "C"
+           locale's empty name, so every entry collapsed into a single
+           blank-named "" key and the language list/current-language
+           detection were effectively empty. */
+        QString langcode = tf.mid(12, tf.length()-15);
         /* FIXME: we currently lack a font with support for Chinese characters in embedded mode */
         //if (isEmbeddedMode() && langcode == "zh")
         //    continue;
