@@ -279,65 +279,72 @@ ApplicationWindow {
                     text: qsTr("Keyboard navigation: <tab> navigate to next button <space> press button/select item <arrow up/down> go up/down in lists")
                 }
 
-                RowLayout {
+                Item {
                     id: langbar
                     Layout.columnSpan: 3
                     Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
                     Layout.bottomMargin: 5
-                    spacing: 10
+                    implicitWidth: langbarRow.implicitWidth
+                    implicitHeight: langbarRow.implicitHeight
                     visible: imageWriter.isEmbeddedMode()
 
                     Rectangle {
-                        anchors.fill: langbar
+                        anchors.fill: parent
                         color: "#ffffe3"
                         radius: 5
                     }
 
-                    Text {
-                        font.pixelSize: 12
-                        font.family: roboto.name
-                        text: qsTr("Language: ")
-                        Layout.leftMargin: 30
-                        Layout.topMargin: 10
-                        Layout.bottomMargin: 10
-                    }
-                    ComboBox {
-                        font.pixelSize: 12
-                        font.family: roboto.name
-                        model: imageWriter.getTranslations()
-                        Layout.preferredWidth: 200
-                        currentIndex: -1
-                        Component.onCompleted: {
-                            currentIndex = find(imageWriter.getCurrentLanguage())
+                    RowLayout {
+                        id: langbarRow
+                        anchors.fill: parent
+                        spacing: 10
+
+                        Text {
+                            font.pixelSize: 12
+                            font.family: roboto.name
+                            text: qsTr("Language: ")
+                            Layout.leftMargin: 30
+                            Layout.topMargin: 10
+                            Layout.bottomMargin: 10
                         }
-                        onActivated: {
-                            imageWriter.changeLanguage(editText)
+                        ComboBox {
+                            font.pixelSize: 12
+                            font.family: roboto.name
+                            model: imageWriter.getTranslations()
+                            Layout.preferredWidth: 200
+                            currentIndex: -1
+                            Component.onCompleted: {
+                                currentIndex = find(imageWriter.getCurrentLanguage())
+                            }
+                            onActivated: {
+                                imageWriter.changeLanguage(editText)
+                            }
+                            Layout.topMargin: 10
+                            Layout.bottomMargin: 10
                         }
-                        Layout.topMargin: 10
-                        Layout.bottomMargin: 10
-                    }
-                    Text {
-                        font.pixelSize: 12
-                        font.family: roboto.name
-                        text: qsTr("Keyboard: ")
-                        Layout.topMargin: 10
-                        Layout.bottomMargin: 10
-                    }
-                    ComboBox {
-                        enabled: imageWriter.isEmbeddedMode()
-                        font.pixelSize: 12
-                        font.family: roboto.name
-                        model: imageWriter.getKeymapLayoutList()
-                        currentIndex: -1
-                        Component.onCompleted: {
-                            currentIndex = find(imageWriter.getCurrentKeyboard())
+                        Text {
+                            font.pixelSize: 12
+                            font.family: roboto.name
+                            text: qsTr("Keyboard: ")
+                            Layout.topMargin: 10
+                            Layout.bottomMargin: 10
                         }
-                        onActivated: {
-                            imageWriter.changeKeyboard(editText)
+                        ComboBox {
+                            enabled: imageWriter.isEmbeddedMode()
+                            font.pixelSize: 12
+                            font.family: roboto.name
+                            model: imageWriter.getKeymapLayoutList()
+                            currentIndex: -1
+                            Component.onCompleted: {
+                                currentIndex = find(imageWriter.getCurrentKeyboard())
+                            }
+                            onActivated: {
+                                imageWriter.changeKeyboard(editText)
+                            }
+                            Layout.topMargin: 10
+                            Layout.bottomMargin: 10
+                            Layout.rightMargin: 30
                         }
-                        Layout.topMargin: 10
-                        Layout.bottomMargin: 10
-                        Layout.rightMargin: 30
                     }
                 }
 
