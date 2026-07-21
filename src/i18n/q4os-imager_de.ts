@@ -268,27 +268,27 @@ Controlled Folder Access scheint aktiviert zu sein. Bitte fügen Sie sowohl q4os
 <context>
     <name>ImageWriter</name>
     <message>
-        <location filename="../imagewriter.cpp" line="248"/>
+        <location filename="../imagewriter.cpp" line="258"/>
         <source>Storage capacity is not large enough.&lt;br&gt;Needs to be at least %1 GB.</source>
         <translation>Die Speicherkapazität ist nicht groß genug.&lt;br&gt;Sie muss mindestens %1 GB betragen.</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="254"/>
+        <location filename="../imagewriter.cpp" line="264"/>
         <source>Input file is not a valid disk image.&lt;br&gt;File size %1 bytes is not a multiple of 512 bytes.</source>
         <translation>Die Eingabedatei ist kein gültiges Disk-Image.&lt;br&gt;Die Dateigröße%1 Bytes ist kein Vielfaches von 512 Bytes.</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="443"/>
+        <location filename="../imagewriter.cpp" line="453"/>
         <source>Downloading and writing image</source>
         <translation>Image herunterladen und schreiben</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="576"/>
+        <location filename="../imagewriter.cpp" line="586"/>
         <source>Select image</source>
         <translation>Image wählen</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="865"/>
+        <location filename="../imagewriter.cpp" line="875"/>
         <source>Would you like to prefill the wifi password from the system keychain?</source>
         <translation>Möchten Sie das Wifi-Passwort aus dem System-Schlüsselbund vorab ausfüllen?</translation>
     </message>
@@ -473,9 +473,8 @@ Controlled Folder Access scheint aktiviert zu sein. Bitte fügen Sie sowohl q4os
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../linux/linuxdrivelist.cpp" line="111"/>
         <source>Internal SD card reader</source>
-        <translation>Interner SD-Kartenleser</translation>
+        <translation type="vanished">Interner SD-Kartenleser</translation>
     </message>
 </context>
 <context>
@@ -514,35 +513,35 @@ Controlled Folder Access scheint aktiviert zu sein. Bitte fügen Sie sowohl q4os
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.qml" line="24"/>
+        <location filename="../main.qml" line="33"/>
         <source>Q4OS Imager v%1</source>
         <translation>Q4OS Imager v%1</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="99"/>
-        <location filename="../main.qml" line="403"/>
+        <location filename="../main.qml" line="108"/>
+        <location filename="../main.qml" line="424"/>
         <source>Operating System</source>
         <translation>Betriebssystem</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="111"/>
+        <location filename="../main.qml" line="120"/>
         <source>CHOOSE OS</source>
         <translation>OS WÄHLEN</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="123"/>
+        <location filename="../main.qml" line="132"/>
         <source>Select this button to change the operating system</source>
         <translation>Klicke auf diesen Knopf, um das Betriebssystem zu ändern</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="135"/>
-        <location filename="../main.qml" line="717"/>
+        <location filename="../main.qml" line="144"/>
+        <location filename="../main.qml" line="738"/>
         <source>Storage</source>
         <translation>Speichermedium</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="147"/>
-        <location filename="../main.qml" line="1045"/>
+        <location filename="../main.qml" line="156"/>
+        <location filename="../main.qml" line="1066"/>
         <source>CHOOSE STORAGE</source>
         <translation>SPEICHER WÄHLEN</translation>
     </message>
@@ -551,208 +550,217 @@ Controlled Folder Access scheint aktiviert zu sein. Bitte fügen Sie sowohl q4os
         <translation type="vanished">Klicke auf diesen Knopf, um die Ziel-SD-Karte zu ändern</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="173"/>
+        <location filename="../main.qml" line="182"/>
         <source>WRITE</source>
         <translation>SCHREIBEN</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="177"/>
+        <location filename="../main.qml" line="186"/>
         <source>Select this button to start writing the image</source>
         <translation>Klicke auf diesen Knopf, um mit dem Schreiben zu beginnen</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="218"/>
+        <location filename="../main.qml" line="227"/>
         <source>CANCEL WRITE</source>
         <translation>SCHREIBEN ABBRECHEN</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="221"/>
-        <location filename="../main.qml" line="972"/>
+        <location filename="../main.qml" line="230"/>
+        <location filename="../main.qml" line="993"/>
         <source>Cancelling...</source>
         <translation>Abbrechen...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="229"/>
+        <location filename="../main.qml" line="238"/>
         <source>CANCEL VERIFY</source>
         <translation>VERIFIZIERUNG ABBRECHEN</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="232"/>
-        <location filename="../main.qml" line="995"/>
-        <location filename="../main.qml" line="1064"/>
+        <location filename="../main.qml" line="241"/>
+        <location filename="../main.qml" line="1016"/>
+        <location filename="../main.qml" line="1084"/>
         <source>Finalizing...</source>
         <translation>Finalisieren...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="509"/>
-        <location filename="../main.qml" line="1029"/>
+        <location filename="../main.qml" line="259"/>
+        <source>Help us build the perfect operating system for everyday use.</source>
+        <translation>Helfen Sie uns, das perfekte Betriebssystem für den Alltag zu entwickeln.</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="260"/>
+        <source>Select this button to donate to Q4OS</source>
+        <translation>Klicke auf diesen Knopf, um an Q4OS zu spenden</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="530"/>
+        <location filename="../main.qml" line="1050"/>
         <source>Erase</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="510"/>
+        <location filename="../main.qml" line="531"/>
         <source>Format card as FAT32</source>
         <translation>Karte als FAT32 formatieren</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="519"/>
+        <location filename="../main.qml" line="540"/>
         <source>Use custom</source>
         <translation>Eigenes Image</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="520"/>
+        <location filename="../main.qml" line="541"/>
         <source>Select a custom .img from your computer</source>
         <translation>Wählen Sie eine eigene .img-Datei von Ihrem Computer</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="465"/>
+        <location filename="../main.qml" line="486"/>
         <source>Back</source>
         <translation>Zurück</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="157"/>
+        <location filename="../main.qml" line="166"/>
         <source>Select this button to change the destination storage device</source>
         <translation>Klicken Sie auf diesen Knopf, um das Ziel-Speichermedium zu ändern</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="251"/>
         <source>Select this button to access advanced settings</source>
-        <translation>Klicken Sie auf diesen Knopf, um zu den erweiterten Einstellungen zu gelangen.</translation>
+        <translation type="vanished">Klicken Sie auf diesen Knopf, um zu den erweiterten Einstellungen zu gelangen.</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="265"/>
+        <location filename="../main.qml" line="279"/>
         <source>Using custom repository: %1</source>
         <translation>Verwende benutzerdefiniertes Repository: %1</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="274"/>
+        <location filename="../main.qml" line="288"/>
         <source>Keyboard navigation: &lt;tab&gt; navigate to next button &lt;space&gt; press button/select item &lt;arrow up/down&gt; go up/down in lists</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="294"/>
+        <location filename="../main.qml" line="314"/>
         <source>Language: </source>
         <translation>Sprache: </translation>
     </message>
     <message>
-        <location filename="../main.qml" line="317"/>
+        <location filename="../main.qml" line="337"/>
         <source>Keyboard: </source>
         <translation>Tastatur: </translation>
     </message>
     <message>
-        <location filename="../main.qml" line="466"/>
+        <location filename="../main.qml" line="487"/>
         <source>Go back to main menu</source>
         <translation>Zurück zum Hauptmenü</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="632"/>
+        <location filename="../main.qml" line="653"/>
         <source>Released: %1</source>
         <translation>Veröffentlicht: %1</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="642"/>
+        <location filename="../main.qml" line="663"/>
         <source>Cached on your computer</source>
         <translation>Auf Ihrem Computer zwischengespeichert</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="644"/>
+        <location filename="../main.qml" line="665"/>
         <source>Local file</source>
         <translation>Lokale Datei</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="645"/>
+        <location filename="../main.qml" line="666"/>
         <source>Online - %1 GB download</source>
         <translation>Online - %1 GB Download</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="770"/>
-        <location filename="../main.qml" line="822"/>
-        <location filename="../main.qml" line="828"/>
+        <location filename="../main.qml" line="791"/>
+        <location filename="../main.qml" line="843"/>
+        <location filename="../main.qml" line="849"/>
         <source>Mounted as %1</source>
         <translation>Als %1 eingebunden</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="824"/>
+        <location filename="../main.qml" line="845"/>
         <source>[WRITE PROTECTED]</source>
         <translation>[SCHREIBGESCHÜTZT]</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="866"/>
+        <location filename="../main.qml" line="887"/>
         <source>Are you sure you want to quit?</source>
         <translation>Sind Sie sicher, dass Sie beenden möchten?</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="867"/>
+        <location filename="../main.qml" line="888"/>
         <source>Q4OS Imager is still busy.&lt;br&gt;Are you sure you want to quit?</source>
         <translation>Der Q4OS Imager ist noch beschäftigt. &lt;br&gt;Möchten Sie wirklich beenden?</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="878"/>
+        <location filename="../main.qml" line="899"/>
         <source>Warning</source>
         <translation>Warnung</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="886"/>
+        <location filename="../main.qml" line="907"/>
         <source>Preparing to write...</source>
         <translation>Schreiben wird vorbereitet...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="910"/>
+        <location filename="../main.qml" line="931"/>
         <source>Update available</source>
         <translation>Update verfügbar</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="911"/>
+        <location filename="../main.qml" line="932"/>
         <source>There is a newer version of Imager available.&lt;br&gt;Would you like to visit the website to download it?</source>
         <translation>Eine neuere Version von Imager ist verfügbar. &lt;br&gt;Möchten Sie die Webseite besuchen, um das Update herunterzuladen?</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="975"/>
+        <location filename="../main.qml" line="996"/>
         <source>Writing... %1%</source>
         <translation>Schreiben... %1%</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1030"/>
+        <location filename="../main.qml" line="1051"/>
         <source>&lt;b&gt;%1&lt;/b&gt; has been erased&lt;br&gt;&lt;br&gt;You can now remove the storage device</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; wurde geleert&lt;br&gt;&lt;br&gt;Sie können das Speichergerät jetzt entfernen</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1037"/>
+        <location filename="../main.qml" line="1058"/>
         <source>&lt;b&gt;%1&lt;/b&gt; has been written to &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;&lt;br&gt;You can now remove the storage device</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; wurde auf &lt;b&gt;%2&lt;/b&gt; geschrieben&lt;br&gt;&lt;br&gt;Sie können das Speichergerät jetzt entfernen</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1294"/>
+        <location filename="../main.qml" line="1313"/>
         <source>Storage device is write protected.&lt;br&gt;If it has a physical lock switch, make sure it is unlocked, and try again.</source>
         <translation>Das Speichergerät ist schreibgeschützt.&lt;br&gt;Falls es einen physischen Sperrschalter besitzt, stellen Sie sicher, dass dieser entriegelt ist, und versuchen Sie es erneut.</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="899"/>
+        <location filename="../main.qml" line="920"/>
         <source>All existing data on &apos;%1&apos; will be erased.&lt;br&gt;Are you sure you want to continue?</source>
         <translation>Alle vorhandenen Daten auf &apos;%1&apos; werden gelöscht.&lt;br&gt;Möchten Sie wirklich fortfahren?</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="954"/>
+        <location filename="../main.qml" line="975"/>
         <source>Error downloading OS list from Internet</source>
         <translation>Fehler beim Herunterladen der Betriebssystemsliste aus dem Internet</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="998"/>
+        <location filename="../main.qml" line="1019"/>
         <source>Verifying... %1%</source>
         <translation>Verifizierung... %1%</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1005"/>
+        <location filename="../main.qml" line="1026"/>
         <source>Preparing to write... (%1)</source>
         <translation>Schreiben wird vorbereitet... (%1)</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1021"/>
+        <location filename="../main.qml" line="1042"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1028"/>
+        <location filename="../main.qml" line="1049"/>
         <source>Write Successful</source>
         <translation>Schreiben erfolgreich</translation>
     </message>
@@ -769,12 +777,12 @@ Controlled Folder Access scheint aktiviert zu sein. Bitte fügen Sie sowohl q4os
         <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; wurde auf &lt;b&gt;%2&lt;/b&gt; geschrieben&lt;br&gt;&lt;br&gt;Sie können die SD-Karte nun aus dem Lesegerät entfernen</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1105"/>
+        <location filename="../main.qml" line="1125"/>
         <source>Error parsing os_list.json</source>
         <translation>Fehler beim Parsen von os_list.json</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1278"/>
+        <location filename="../main.qml" line="1298"/>
         <source>Connect an USB stick containing images first.&lt;br&gt;The images must be located in the root folder of the USB stick.</source>
         <translation>Verbinden Sie zuerst einen USB-Stick mit Images.&lt;br&gt;Die Images müssen sich im Wurzelverzeichnes des USB-Sticks befinden.</translation>
     </message>

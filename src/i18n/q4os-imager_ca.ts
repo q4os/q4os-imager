@@ -250,27 +250,27 @@
 <context>
     <name>ImageWriter</name>
     <message>
-        <location filename="../imagewriter.cpp" line="248"/>
+        <location filename="../imagewriter.cpp" line="258"/>
         <source>Storage capacity is not large enough.&lt;br&gt;Needs to be at least %1 GB.</source>
         <translation>La capacitat de l&apos;emmagatzematge no és suficient.&lt;br&gt;Ha de ser de %1 GB com a mínim.</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="254"/>
+        <location filename="../imagewriter.cpp" line="264"/>
         <source>Input file is not a valid disk image.&lt;br&gt;File size %1 bytes is not a multiple of 512 bytes.</source>
         <translation>El fitxer d&apos;entrada no és una imatge de disc vàlida.&lt;br&gt;La mida del fitxer és de %1 bytes, que no és múltiple de 512 bytes.</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="443"/>
+        <location filename="../imagewriter.cpp" line="453"/>
         <source>Downloading and writing image</source>
         <translation>S&apos;està baixant i escrivint la imatge</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="576"/>
+        <location filename="../imagewriter.cpp" line="586"/>
         <source>Select image</source>
         <translation>Selecciona una imatge</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="865"/>
+        <location filename="../imagewriter.cpp" line="875"/>
         <source>Would you like to prefill the wifi password from the system keychain?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -459,9 +459,8 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../linux/linuxdrivelist.cpp" line="111"/>
         <source>Internal SD card reader</source>
-        <translation>Lector de targetes SD intern</translation>
+        <translation type="vanished">Lector de targetes SD intern</translation>
     </message>
 </context>
 <context>
@@ -500,241 +499,246 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.qml" line="24"/>
+        <location filename="../main.qml" line="33"/>
         <source>Q4OS Imager v%1</source>
         <translation>Q4OS Imager v%1</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="99"/>
-        <location filename="../main.qml" line="403"/>
+        <location filename="../main.qml" line="108"/>
+        <location filename="../main.qml" line="424"/>
         <source>Operating System</source>
         <translation>Sistema operatiu</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="111"/>
+        <location filename="../main.qml" line="120"/>
         <source>CHOOSE OS</source>
         <translation>ESCULL SO</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="123"/>
+        <location filename="../main.qml" line="132"/>
         <source>Select this button to change the operating system</source>
         <translation>Seleccioneu aquest botó si voleu canviar el sistema operatiu</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="135"/>
-        <location filename="../main.qml" line="717"/>
+        <location filename="../main.qml" line="144"/>
+        <location filename="../main.qml" line="738"/>
         <source>Storage</source>
         <translation>Emmagatzematge</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="147"/>
-        <location filename="../main.qml" line="1045"/>
+        <location filename="../main.qml" line="156"/>
+        <location filename="../main.qml" line="1066"/>
         <source>CHOOSE STORAGE</source>
         <translation>ESCULL L&apos;EMMAGATZEMATGE</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="173"/>
+        <location filename="../main.qml" line="182"/>
         <source>WRITE</source>
         <translation>ESCRIU</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="177"/>
+        <location filename="../main.qml" line="186"/>
         <source>Select this button to start writing the image</source>
         <translation>Seleccioneu aquest botó per a començar l&apos;escriptura de la imatge</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="218"/>
+        <location filename="../main.qml" line="227"/>
         <source>CANCEL WRITE</source>
         <translation>CANCEL·LA L&apos;ESCRIPTURA</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="221"/>
-        <location filename="../main.qml" line="972"/>
+        <location filename="../main.qml" line="230"/>
+        <location filename="../main.qml" line="993"/>
         <source>Cancelling...</source>
         <translation>S&apos;està cancel·lant...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="229"/>
+        <location filename="../main.qml" line="238"/>
         <source>CANCEL VERIFY</source>
         <translation>CANCEL·LA LA VERIFICACIÓ</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="232"/>
-        <location filename="../main.qml" line="995"/>
-        <location filename="../main.qml" line="1064"/>
+        <location filename="../main.qml" line="241"/>
+        <location filename="../main.qml" line="1016"/>
+        <location filename="../main.qml" line="1084"/>
         <source>Finalizing...</source>
         <translation>S&apos;està finalitzant...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="251"/>
-        <source>Select this button to access advanced settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../main.qml" line="265"/>
+        <location filename="../main.qml" line="279"/>
         <source>Using custom repository: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="274"/>
+        <location filename="../main.qml" line="288"/>
         <source>Keyboard navigation: &lt;tab&gt; navigate to next button &lt;space&gt; press button/select item &lt;arrow up/down&gt; go up/down in lists</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="294"/>
+        <location filename="../main.qml" line="314"/>
         <source>Language: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="317"/>
+        <location filename="../main.qml" line="337"/>
         <source>Keyboard: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="509"/>
-        <location filename="../main.qml" line="1029"/>
+        <location filename="../main.qml" line="530"/>
+        <location filename="../main.qml" line="1050"/>
         <source>Erase</source>
         <translation>Esborra</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="510"/>
+        <location filename="../main.qml" line="531"/>
         <source>Format card as FAT32</source>
         <translation>Formata la targeta com a FAT32</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="519"/>
+        <location filename="../main.qml" line="540"/>
         <source>Use custom</source>
         <translation>Utilitza una personalitzada</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="520"/>
+        <location filename="../main.qml" line="541"/>
         <source>Select a custom .img from your computer</source>
         <translation>Selecciona una imatge .img personalitzada de l&apos;ordinador</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1030"/>
+        <location filename="../main.qml" line="1051"/>
         <source>&lt;b&gt;%1&lt;/b&gt; has been erased&lt;br&gt;&lt;br&gt;You can now remove the storage device</source>
         <translation>S&apos;ha esborrat &lt;b&gt;%1&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ja podeu retirar el dispositiu d&apos;emmagatzematge</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1037"/>
+        <location filename="../main.qml" line="1058"/>
         <source>&lt;b&gt;%1&lt;/b&gt; has been written to &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;&lt;br&gt;You can now remove the storage device</source>
         <translation>S&apos;ha escrit &lt;b&gt;%1&lt;/b&gt; a &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ja podeu retirar el dispositiu d&apos;emmagatzematge</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1294"/>
+        <location filename="../main.qml" line="1313"/>
         <source>Storage device is write protected.&lt;br&gt;If it has a physical lock switch, make sure it is unlocked, and try again.</source>
         <translation>El dispositiu d&apos;emmagatzematge està protegit contra escriptura.&lt;br&gt;Si té un interruptor de bloqueig físic, assegureu-vos que estigui desbloquejat, i torneu-ho a provar.</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="465"/>
+        <location filename="../main.qml" line="486"/>
         <source>Back</source>
         <translation>Enrere</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="157"/>
+        <location filename="../main.qml" line="166"/>
         <source>Select this button to change the destination storage device</source>
         <translation>Seleccioneu aquest botó per a canviar la destinació del dispositiu d&apos;emmagatzematge</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="466"/>
+        <location filename="../main.qml" line="259"/>
+        <source>Help us build the perfect operating system for everyday use.</source>
+        <translation>Ajudeu-nos a crear el sistema operatiu perfecte per a l&apos;ús diari.</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="260"/>
+        <source>Select this button to donate to Q4OS</source>
+        <translation>Seleccioneu aquest botó si voleu fer una donació a Q4OS</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="487"/>
         <source>Go back to main menu</source>
         <translation>Torna al menú principal</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="632"/>
+        <location filename="../main.qml" line="653"/>
         <source>Released: %1</source>
         <translation>Llançat el: %1</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="642"/>
+        <location filename="../main.qml" line="663"/>
         <source>Cached on your computer</source>
         <translation>A la memòria cau de l&apos;ordinador</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="644"/>
+        <location filename="../main.qml" line="665"/>
         <source>Local file</source>
         <translation>Fitxer local</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="645"/>
+        <location filename="../main.qml" line="666"/>
         <source>Online - %1 GB download</source>
         <translation>Baixada en línia de: %1 GB</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="770"/>
-        <location filename="../main.qml" line="822"/>
-        <location filename="../main.qml" line="828"/>
+        <location filename="../main.qml" line="791"/>
+        <location filename="../main.qml" line="843"/>
+        <location filename="../main.qml" line="849"/>
         <source>Mounted as %1</source>
         <translation>Muntat com a %1</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="824"/>
+        <location filename="../main.qml" line="845"/>
         <source>[WRITE PROTECTED]</source>
         <translation>[PROTEGIT CONTRA ESCRIPTURA]</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="866"/>
+        <location filename="../main.qml" line="887"/>
         <source>Are you sure you want to quit?</source>
         <translation>N&apos;esteu segur que voleu sortir?</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="867"/>
+        <location filename="../main.qml" line="888"/>
         <source>Q4OS Imager is still busy.&lt;br&gt;Are you sure you want to quit?</source>
         <translation>El Q4OS Imager està ocupat.&lt;br&gt;N&apos;esteu segur que voleu sortir?</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="878"/>
+        <location filename="../main.qml" line="899"/>
         <source>Warning</source>
         <translation>Avís</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="886"/>
+        <location filename="../main.qml" line="907"/>
         <source>Preparing to write...</source>
         <translation>S&apos;està preparant per a escriure...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="910"/>
+        <location filename="../main.qml" line="931"/>
         <source>Update available</source>
         <translation>Hi ha una actualització disponible</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="911"/>
+        <location filename="../main.qml" line="932"/>
         <source>There is a newer version of Imager available.&lt;br&gt;Would you like to visit the website to download it?</source>
         <translation>Hi ha una nova versió de l&apos;Imager disponible.&lt;br&gt;Voleu visitar el lloc web per baixar-la?</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="975"/>
+        <location filename="../main.qml" line="996"/>
         <source>Writing... %1%</source>
         <translation>S&apos;està escrivint... %1%</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="899"/>
+        <location filename="../main.qml" line="920"/>
         <source>All existing data on &apos;%1&apos; will be erased.&lt;br&gt;Are you sure you want to continue?</source>
         <translation>Totes les dades existents a «%1» s&apos;esborraràn.&lt;br&gt;Esteu segur que voleu continuar?</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="954"/>
+        <location filename="../main.qml" line="975"/>
         <source>Error downloading OS list from Internet</source>
         <translation>S&apos;ha produït un error en baixar la llista dels SO d&apos;internet</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="998"/>
+        <location filename="../main.qml" line="1019"/>
         <source>Verifying... %1%</source>
         <translation>S&apos;està verificant... %1%</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1005"/>
+        <location filename="../main.qml" line="1026"/>
         <source>Preparing to write... (%1)</source>
         <translation>S&apos;està preparant per escriure... (%1)</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1021"/>
+        <location filename="../main.qml" line="1042"/>
         <source>Error</source>
         <translation>S&apos;ha produït un error</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1028"/>
+        <location filename="../main.qml" line="1049"/>
         <source>Write Successful</source>
         <translation>S&apos;ha escrit amb èxit</translation>
     </message>
@@ -751,12 +755,12 @@
         <translation type="vanished">S&apos;ha escrit el «&lt;b&gt;%1&lt;/b&gt;» a &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ja podeu retirar la targeta SD del lector</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1105"/>
+        <location filename="../main.qml" line="1125"/>
         <source>Error parsing os_list.json</source>
         <translation>S&apos;ha produït un error en analitzar os_lists.json</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1278"/>
+        <location filename="../main.qml" line="1298"/>
         <source>Connect an USB stick containing images first.&lt;br&gt;The images must be located in the root folder of the USB stick.</source>
         <translation>Connecteu una memòria USB que contingui primer imatges.&lt;br&gt;Les imatges s&apos;han de trobar a la carpeta arrel de la memòria.</translation>
     </message>

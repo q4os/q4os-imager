@@ -256,7 +256,7 @@ ApplicationWindow {
                         hoverEnabled: true
                         ToolTip.visible: hovered
                         ToolTip.delay: 1000
-                        ToolTip.text: qsTr("Donate to Q4OS. Help us develop the perfect operating system for everyday use.")
+                        ToolTip.text: qsTr("Help us build the perfect operating system for everyday use.")
                         Accessible.description: qsTr("Select this button to donate to Q4OS")
                         background: Rectangle {
                             color: "transparent"
