@@ -1,0 +1,49 @@
+name: linux-deb11-build
+
+# Build the q4os-imager .deb package for Debian 11 (bullseye) from the
+# debian/ packaging tree, using the official debian:bullseye container
+# image so the build environment matches the target distro exactly
+# (GitHub's hosted runners are Ubuntu, not Debian).
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+    tags: [ 'v*' ]
+
+jobs:
+  linux-deb11:
+    runs-on: ubuntu-latest
+    container: debian:bullseye
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install build tools and Build-Depends
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            build-essential fakeroot dpkg-dev \
+            debhelper cmake libarchive-dev libcurl4-gnutls-dev \
+            qtbase5-dev qtbase5-dev-tools qtdeclarative5-dev libqt5svg5-dev qttools5-dev libgnutls28-dev \
+            qml-module-qtquick2 qml-module-qtquick-controls2 qml-module-qtquick-layouts \
+            qml-module-qtquick-templates2 qml-module-qtquick-window2 qml-module-qtgraphicaleffects
+
+      - name: Build package (dpkg-buildpackage)
+        run: dpkg-buildpackage -us -uc -b
+
+      # dpkg-buildpackage places the .deb(s) in the parent directory of the
+      # source tree; collect them into the workspace so upload-artifact can
+      # glob a normal in-workspace path
+      - name: Collect .deb artifacts
+        run: |
+          mkdir -p artifacts
+          cp ../*.deb artifacts/
+          ls -la artifacts
+
+      - name: Upload deb artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: q4os-imager-linux-deb11
+          path: artifacts/*.deb
+          if-no-files-found: error
