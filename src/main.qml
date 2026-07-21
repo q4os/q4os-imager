@@ -14,11 +14,20 @@ ApplicationWindow {
     id: window
     visible: true
 
+    /* The langbar (Language/Keyboard row, normally only shown in embedded
+       mode where height is auto-sized to content via -1) can also be
+       forced visible in a normal, fixed-height window via the
+       Shift+Ctrl+L test shortcut. The reddish content area's height is a
+       fixed window.height/2, with no room budgeted for this extra row,
+       so without growing the window here the bar renders past the
+       bottom edge and is invisible except for a sliver. */
+    readonly property int langbarHeight: 80
+
     width: imageWriter.isEmbeddedMode() ? -1 : 680
-    height: imageWriter.isEmbeddedMode() ? -1 : 420
+    height: imageWriter.isEmbeddedMode() ? -1 : (langbar.visible ? 420 + langbarHeight + 50 : 420)
     minimumWidth: imageWriter.isEmbeddedMode() ? -1 : 680
     //maximumWidth: imageWriter.isEmbeddedMode() ? -1 : 680
-    minimumHeight: imageWriter.isEmbeddedMode() ? -1 : 420
+    minimumHeight: imageWriter.isEmbeddedMode() ? -1 : (langbar.visible ? 420 + langbarHeight + 50 : 420)
     //maximumHeight: imageWriter.isEmbeddedMode() ? -1 : 420
 
     title: qsTr("Q4OS Imager v%1").arg(imageWriter.constantVersion())
@@ -282,21 +291,21 @@ ApplicationWindow {
                 Item {
                     id: langbar
                     Layout.columnSpan: 3
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: window.langbarHeight
                     Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
                     Layout.bottomMargin: 5
-                    implicitWidth: langbarRow.implicitWidth
-                    implicitHeight: langbarRow.implicitHeight
                     visible: imageWriter.isEmbeddedMode()
 
                     Rectangle {
-                        anchors.fill: parent
+                        anchors.fill: langbarRow
                         color: "#ffffe3"
                         radius: 5
                     }
 
                     RowLayout {
                         id: langbarRow
-                        anchors.fill: parent
+                        anchors.centerIn: parent
                         spacing: 10
 
                         Text {
