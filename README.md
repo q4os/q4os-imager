@@ -12,13 +12,18 @@ baseline and a summary of the changes made in this fork.
 - Website: <https://q4os.org>
 - Contact: <devteam@q4os.org>
 
+<table>
+<tr>
+<td><a href="doc/img/screenshot_linux.png"><img src="doc/img/screenshot_linux.png" alt="Q4OS Imager on Linux" width="440"></a></td>
+<td><a href="doc/img/screenshot_windows.png"><img src="doc/img/screenshot_windows.png" alt="Q4OS Imager on Windows" width="440"></a></td>
+</tr>
+</table>
+
 ## Features
 
 - Downloads the current Q4OS image list and writes the selected image in one step
 - Writes local images (`.img`, or compressed `.zip`, `.gz`, `.xz`, ...)
 - Verifies the written medium after flashing
-- Advanced options dialog (press <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>X</kbd>)
-  for hostname, SSH, Wi-Fi and locale presets
 - Runs on Linux and Windows
 
 ## Installation
