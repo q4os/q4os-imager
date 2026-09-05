@@ -1,7 +1,7 @@
-name: linux-deb11-build
+name: linux-deb12-build
 
-# Build the q4os-imager .deb package for Debian 11 (bullseye) from the
-# debian/ packaging tree, using the official debian:bullseye container
+# Build the q4os-imager .deb package for Debian 12 (bookworm) from the
+# debian/ packaging tree, using the official debian:bookworm container
 # image so the build environment matches the target distro exactly
 # (GitHub's hosted runners are Ubuntu, not Debian).
 
@@ -12,9 +12,9 @@ on:
     tags: [ 'v*' ]
 
 jobs:
-  linux-deb11:
+  linux-deb12:
     runs-on: ubuntu-latest
-    container: debian:bullseye
+    container: debian:bookworm
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -44,6 +44,6 @@ jobs:
       - name: Upload deb artifact
         uses: actions/upload-artifact@v4
         with:
-          name: q4os-imager-linux-deb11
+          name: q4os-imager-linux-deb12
           path: artifacts/*.deb
           if-no-files-found: error
