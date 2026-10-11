@@ -102,7 +102,7 @@
     <message>
         <location filename="../downloadthread.cpp" line="906"/>
         <source>Customizing image</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntü özelleştiriliyor</translation>
     </message>
     <message>
         <location filename="../downloadthread.cpp" line="460"/>
@@ -144,7 +144,7 @@
     <message>
         <location filename="../downloadthread.cpp" line="118"/>
         <source>unmounting drive</source>
-        <translation type="unfinished"></translation>
+        <translation>sürücünün bağlantısı kaldırılıyor</translation>
     </message>
     <message>
         <location filename="../downloadthread.cpp" line="138"/>
@@ -213,7 +213,7 @@
     <message>
         <location filename="../driveformatthread.cpp" line="199"/>
         <source>Partitioning did not create expected FAT partition %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Bölümlendirme beklenen FAT bölümünü oluşturmadı: %1</translation>
     </message>
     <message>
         <location filename="../driveformatthread.cpp" line="208"/>
@@ -234,29 +234,29 @@
 <context>
     <name>ImageWriter</name>
     <message>
-        <location filename="../imagewriter.cpp" line="258"/>
+        <location filename="../imagewriter.cpp" line="260"/>
         <source>Storage capacity is not large enough.&lt;br&gt;Needs to be at least %1 GB.</source>
         <translation>Depolama kapasitesi yeterince büyük değil.&lt;br&gt;En az %1 GB olması gerekiyor</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="264"/>
+        <location filename="../imagewriter.cpp" line="266"/>
         <source>Input file is not a valid disk image.&lt;br&gt;File size %1 bytes is not a multiple of 512 bytes.</source>
         <translation>Giriş dosyası geçerli bir disk görüntüsü değil.&lt;br&gt;%1 bayt dosya boyutu 512 baytın katı değil.</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="453"/>
+        <location filename="../imagewriter.cpp" line="455"/>
         <source>Downloading and writing image</source>
         <translation>Görüntü indirme ve yazma</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="586"/>
+        <location filename="../imagewriter.cpp" line="588"/>
         <source>Select image</source>
         <translation>Imaj seç</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="875"/>
+        <location filename="../imagewriter.cpp" line="877"/>
         <source>Would you like to prefill the wifi password from the system keychain?</source>
-        <translation type="unfinished"></translation>
+        <translation>Wi-Fi parolası sistem anahtar zincirinden doldurulsun mu?</translation>
     </message>
 </context>
 <context>
@@ -275,24 +275,35 @@
 <context>
     <name>MsgPopup</name>
     <message>
-        <location filename="../MsgPopup.qml" line="98"/>
+        <location filename="../MsgPopup.qml" line="99"/>
         <source>NO</source>
         <translation>HAYIR</translation>
     </message>
     <message>
-        <location filename="../MsgPopup.qml" line="109"/>
+        <location filename="../MsgPopup.qml" line="110"/>
         <source>YES</source>
         <translation>EVET</translation>
     </message>
     <message>
-        <location filename="../MsgPopup.qml" line="120"/>
+        <location filename="../MsgPopup.qml" line="122"/>
+        <location filename="../MsgPopup.qml" line="158"/>
+        <source>COPY ADDRESS</source>
+        <translation>ADRESİ KOPYALA</translation>
+    </message>
+    <message>
+        <location filename="../MsgPopup.qml" line="125"/>
+        <source>ADDRESS COPIED</source>
+        <translation>ADRES KOPYALANDI</translation>
+    </message>
+    <message>
+        <location filename="../MsgPopup.qml" line="133"/>
         <source>CONTINUE</source>
         <translation>DEVAM ET</translation>
     </message>
     <message>
-        <location filename="../MsgPopup.qml" line="130"/>
+        <location filename="../MsgPopup.qml" line="143"/>
         <source>QUIT</source>
-        <translation type="unfinished"></translation>
+        <translation>ÇIK</translation>
     </message>
 </context>
 <context>
@@ -300,128 +311,128 @@
     <message>
         <location filename="../OptionsPopup.qml" line="80"/>
         <source>Advanced options</source>
-        <translation type="unfinished"></translation>
+        <translation>Gelişmiş seçenekler</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="97"/>
         <source>Image customization options</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntü özelleştirme seçenekleri</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="105"/>
         <source>for this session only</source>
-        <translation type="unfinished"></translation>
+        <translation>yalnızca bu oturum için</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="106"/>
         <source>to always use</source>
-        <translation type="unfinished"></translation>
+        <translation>her zaman kullanmak için</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="120"/>
         <source>Set hostname:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ana bilgisayar adını ayarla:</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="140"/>
         <source>Enable SSH</source>
-        <translation type="unfinished"></translation>
+        <translation>SSH&apos;yi etkinleştir</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="162"/>
         <source>Use password authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>Parolayla kimlik doğrulamayı kullan</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="172"/>
         <source>Allow public-key authentication only</source>
-        <translation type="unfinished"></translation>
+        <translation>Yalnızca açık anahtarla kimlik doğrulamaya izin ver</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="190"/>
         <source>Set authorized_keys for &apos;%1&apos;:</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;%1&apos; için authorized_keys ayarla:</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="264"/>
         <source>Configure wireless LAN</source>
-        <translation type="unfinished"></translation>
+        <translation>Kablosuz ağı yapılandır</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="283"/>
         <source>SSID:</source>
-        <translation type="unfinished"></translation>
+        <translation>SSID:</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="237"/>
         <location filename="../OptionsPopup.qml" line="303"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Parola:</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="203"/>
         <source>Set username and password</source>
-        <translation type="unfinished"></translation>
+        <translation>Kullanıcı adı ve parolayı ayarla</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="222"/>
         <source>Username:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kullanıcı adı:</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="298"/>
         <source>Hidden SSID</source>
-        <translation type="unfinished"></translation>
+        <translation>Gizli SSID</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="319"/>
         <source>Show password</source>
-        <translation type="unfinished"></translation>
+        <translation>Parolayı göster</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="324"/>
         <source>Wireless LAN country:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kablosuz ağ ülkesi:</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="335"/>
         <source>Set locale settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Yerel ayarları belirle</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="345"/>
         <source>Time zone:</source>
-        <translation type="unfinished"></translation>
+        <translation>Saat dilimi:</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="355"/>
         <source>Keyboard layout:</source>
-        <translation type="unfinished"></translation>
+        <translation>Klavye düzeni:</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="368"/>
         <source>Persistent settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Kalıcı ayarlar</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="376"/>
         <source>Play sound when finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitince ses çal</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="380"/>
         <source>Eject media when finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitince ortamı çıkar</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="384"/>
         <source>Enable telemetry</source>
-        <translation type="unfinished"></translation>
+        <translation>Telemetriyi etkinleştir</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="397"/>
         <source>SAVE</source>
-        <translation type="unfinished"></translation>
+        <translation>KAYDET</translation>
     </message>
 </context>
 <context>
@@ -436,12 +447,12 @@
     <message>
         <location filename="../UseSavedSettingsPopup.qml" line="73"/>
         <source>Warning: advanced settings set</source>
-        <translation type="unfinished"></translation>
+        <translation>Uyarı: gelişmiş ayarlar belirlenmiş</translation>
     </message>
     <message>
         <location filename="../UseSavedSettingsPopup.qml" line="87"/>
         <source>Would you like to apply the image customization settings saved earlier?</source>
-        <translation type="unfinished"></translation>
+        <translation>Daha önce kaydedilen görüntü özelleştirme ayarları uygulansın mı?</translation>
     </message>
     <message>
         <location filename="../UseSavedSettingsPopup.qml" line="97"/>
@@ -451,17 +462,17 @@
     <message>
         <location filename="../UseSavedSettingsPopup.qml" line="107"/>
         <source>NO, CLEAR SETTINGS</source>
-        <translation type="unfinished"></translation>
+        <translation>HAYIR, AYARLARI TEMİZLE</translation>
     </message>
     <message>
         <location filename="../UseSavedSettingsPopup.qml" line="117"/>
         <source>YES</source>
-        <translation type="unfinished">EVET</translation>
+        <translation>EVET</translation>
     </message>
     <message>
         <location filename="../UseSavedSettingsPopup.qml" line="127"/>
         <source>EDIT SETTINGS</source>
-        <translation type="unfinished"></translation>
+        <translation>AYARLARI DÜZENLE</translation>
     </message>
 </context>
 <context>
@@ -473,7 +484,7 @@
     </message>
     <message>
         <location filename="../main.qml" line="108"/>
-        <location filename="../main.qml" line="424"/>
+        <location filename="../main.qml" line="448"/>
         <source>Operating System</source>
         <translation>İşletim sistemi</translation>
     </message>
@@ -489,13 +500,13 @@
     </message>
     <message>
         <location filename="../main.qml" line="144"/>
-        <location filename="../main.qml" line="738"/>
+        <location filename="../main.qml" line="762"/>
         <source>Storage</source>
         <translation>Depolama</translation>
     </message>
     <message>
         <location filename="../main.qml" line="156"/>
-        <location filename="../main.qml" line="1066"/>
+        <location filename="../main.qml" line="1095"/>
         <source>CHOOSE STORAGE</source>
         <translation>DEPOLAMA SEÇİN</translation>
     </message>
@@ -514,204 +525,214 @@
         <translation>Görüntüyü yazmaya başlamak için bu düğmeyi seçin</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="227"/>
+        <location filename="../main.qml" line="235"/>
         <source>CANCEL WRITE</source>
         <translation>YAZMAYI İPTAL ET</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="230"/>
-        <location filename="../main.qml" line="993"/>
+        <location filename="../main.qml" line="238"/>
+        <location filename="../main.qml" line="1023"/>
         <source>Cancelling...</source>
         <translation>İptal ediliyor...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="238"/>
+        <location filename="../main.qml" line="246"/>
         <source>CANCEL VERIFY</source>
         <translation>DOĞRULAMA İPTALİ</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="241"/>
-        <location filename="../main.qml" line="1016"/>
-        <location filename="../main.qml" line="1084"/>
+        <location filename="../main.qml" line="249"/>
+        <location filename="../main.qml" line="1046"/>
+        <location filename="../main.qml" line="1113"/>
         <source>Finalizing...</source>
         <translation>Bitiriliyor...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="259"/>
+        <location filename="../main.qml" line="276"/>
         <source>Help us build the perfect operating system for everyday use.</source>
         <translation>Günlük kullanım için mükemmel işletim sistemini oluşturmamıza yardımcı olun.</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="260"/>
+        <location filename="../main.qml" line="283"/>
         <source>Select this button to donate to Q4OS</source>
         <translation>Q4OS&apos;a bağış yapmak için bu düğmeyi seçin</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="530"/>
-        <location filename="../main.qml" line="1050"/>
+        <location filename="../main.qml" line="554"/>
+        <location filename="../main.qml" line="1079"/>
         <source>Erase</source>
         <translation>Sil</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="531"/>
+        <location filename="../main.qml" line="555"/>
         <source>Format card as FAT32</source>
         <translation>Kartı FAT32 olarak biçimlendir</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="540"/>
+        <location filename="../main.qml" line="564"/>
         <source>Use custom</source>
         <translation>Özel imaj kullan</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="541"/>
+        <location filename="../main.qml" line="565"/>
         <source>Select a custom .img from your computer</source>
         <translation>Bilgisayarınızdan özel bir .img seçin</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="486"/>
+        <location filename="../main.qml" line="510"/>
         <source>Back</source>
         <translation>Geri</translation>
     </message>
     <message>
         <location filename="../main.qml" line="166"/>
         <source>Select this button to change the destination storage device</source>
-        <translation type="unfinished"></translation>
+        <translation>Hedef depolama aygıtını değiştirmek için bu düğmeyi seçin</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="279"/>
+        <location filename="../main.qml" line="303"/>
         <source>Using custom repository: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Özel depo kullanılıyor: %1</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="288"/>
+        <location filename="../main.qml" line="312"/>
         <source>Keyboard navigation: &lt;tab&gt; navigate to next button &lt;space&gt; press button/select item &lt;arrow up/down&gt; go up/down in lists</source>
-        <translation type="unfinished"></translation>
+        <translation>Klavyeyle gezinme: &lt;tab&gt; sonraki düğmeye geç &lt;boşluk&gt; düğmeye bas/öğeyi seç &lt;yukarı/aşağı ok&gt; listelerde yukarı/aşağı git</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="314"/>
+        <location filename="../main.qml" line="338"/>
         <source>Language: </source>
-        <translation type="unfinished"></translation>
+        <translation>Dil: </translation>
     </message>
     <message>
-        <location filename="../main.qml" line="337"/>
+        <location filename="../main.qml" line="361"/>
         <source>Keyboard: </source>
-        <translation type="unfinished"></translation>
+        <translation>Klavye: </translation>
     </message>
     <message>
-        <location filename="../main.qml" line="487"/>
+        <location filename="../main.qml" line="511"/>
         <source>Go back to main menu</source>
         <translation>Ana menüye dön</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="653"/>
+        <location filename="../main.qml" line="677"/>
         <source>Released: %1</source>
         <translation>Yayın: %1</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="663"/>
+        <location filename="../main.qml" line="687"/>
         <source>Cached on your computer</source>
         <translation>Bilgisayarınızda önbelleğe alındı
 </translation>
     </message>
     <message>
-        <location filename="../main.qml" line="665"/>
+        <location filename="../main.qml" line="689"/>
         <source>Local file</source>
         <translation>Yerel dosya</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="666"/>
+        <location filename="../main.qml" line="690"/>
         <source>Online - %1 GB download</source>
         <translation>Çevrimiçi -%1 GB indir</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="791"/>
-        <location filename="../main.qml" line="843"/>
-        <location filename="../main.qml" line="849"/>
+        <location filename="../main.qml" line="815"/>
+        <location filename="../main.qml" line="867"/>
+        <location filename="../main.qml" line="873"/>
         <source>Mounted as %1</source>
         <translation>%1 olarak bağlandı.</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="845"/>
+        <location filename="../main.qml" line="869"/>
         <source>[WRITE PROTECTED]</source>
         <translation>[YAZMA KORUMALI]</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="887"/>
+        <location filename="../main.qml" line="909"/>
+        <source>No web browser</source>
+        <translation>Web tarayıcısı yok</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="910"/>
+        <source>There is no web browser installed to open the donation page.&lt;br&gt;&lt;br&gt;To support Q4OS, please visit&lt;br&gt;&lt;b&gt;www.q4os.org/dnt_donate.html&lt;/b&gt;&lt;br&gt;&lt;br&gt;Thank you!</source>
+        <translation>Bağış sayfasını açmak için yüklü bir web tarayıcısı yok.&lt;br&gt;&lt;br&gt;Q4OS&apos;u desteklemek için lütfen şu adresi ziyaret edin:&lt;br&gt;&lt;b&gt;www.q4os.org/dnt_donate.html&lt;/b&gt;&lt;br&gt;&lt;br&gt;Teşekkürler!</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="918"/>
         <source>Are you sure you want to quit?</source>
         <translation>Çıkmak istediğine emin misin?</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="888"/>
+        <location filename="../main.qml" line="919"/>
         <source>Q4OS Imager is still busy.&lt;br&gt;Are you sure you want to quit?</source>
         <translation>Q4OS Imager hala meşgul.&lt;br&gt;Çıkmak istediğinizden emin misiniz?</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="899"/>
+        <location filename="../main.qml" line="930"/>
         <source>Warning</source>
         <translation>Uyarı</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="907"/>
+        <location filename="../main.qml" line="937"/>
         <source>Preparing to write...</source>
         <translation>Yazdırmaya hazırlanıyor...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="931"/>
+        <location filename="../main.qml" line="961"/>
         <source>Update available</source>
         <translation>Güncelleme bulunuyor</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="932"/>
+        <location filename="../main.qml" line="962"/>
         <source>There is a newer version of Imager available.&lt;br&gt;Would you like to visit the website to download it?</source>
         <translation>Görüntüleyicinin daha yeni bir sürümü var. &lt;br&gt; İndirmek için web sitesini ziyaret etmek ister misiniz?</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="996"/>
+        <location filename="../main.qml" line="1026"/>
         <source>Writing... %1%</source>
         <translation>Yazılıyor... %1%</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1051"/>
+        <location filename="../main.qml" line="1080"/>
         <source>&lt;b&gt;%1&lt;/b&gt; has been erased&lt;br&gt;&lt;br&gt;You can now remove the storage device</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; silindi&lt;br&gt;&lt;br&gt;Artık depolama cihazını çıkarabilirsiniz</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1058"/>
+        <location filename="../main.qml" line="1087"/>
         <source>&lt;b&gt;%1&lt;/b&gt; has been written to &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;&lt;br&gt;You can now remove the storage device</source>
         <translation>&lt;b&gt;%1&lt;/b&gt;, &lt;b&gt;%2&lt;/b&gt; üzerine yazıldı&lt;br&gt;&lt;br&gt;Artık depolama cihazını çıkarabilirsiniz</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1313"/>
+        <location filename="../main.qml" line="1342"/>
         <source>Storage device is write protected.&lt;br&gt;If it has a physical lock switch, make sure it is unlocked, and try again.</source>
         <translation>Depolama cihazı yazmaya karşı korumalı.&lt;br&gt;Fiziksel bir kilit anahtarı varsa, kilidinin açık olduğundan emin olun ve tekrar deneyin.</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="920"/>
+        <location filename="../main.qml" line="950"/>
         <source>All existing data on &apos;%1&apos; will be erased.&lt;br&gt;Are you sure you want to continue?</source>
         <translation>&apos;%1&apos; üzerindeki mevcut tüm veriler silinecek.&lt;br&gt;Devam etmek istediğinizden emin misiniz?</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="975"/>
+        <location filename="../main.qml" line="1005"/>
         <source>Error downloading OS list from Internet</source>
         <translation>İnternetten işletim sistemi listesi indirilirken hata oluştu</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1019"/>
+        <location filename="../main.qml" line="1049"/>
         <source>Verifying... %1%</source>
         <translation>Doğrulanıyor... %1%</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1026"/>
+        <location filename="../main.qml" line="1056"/>
         <source>Preparing to write... (%1)</source>
         <translation>Yazdırmaya hazırlanıyor... (%1)</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1042"/>
+        <location filename="../main.qml" line="1071"/>
         <source>Error</source>
         <translation>Hata</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1049"/>
+        <location filename="../main.qml" line="1078"/>
         <source>Write Successful</source>
         <translation>Başarılı Yazıldı</translation>
     </message>
@@ -728,12 +749,12 @@
         <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;&lt;br&gt; üzerine yazıldı. Artık SD kartı okuyucudan çıkarabilirsiniz</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1125"/>
+        <location filename="../main.qml" line="1154"/>
         <source>Error parsing os_list.json</source>
         <translation>os_list.json ayrıştırma hatası</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1298"/>
+        <location filename="../main.qml" line="1327"/>
         <source>Connect an USB stick containing images first.&lt;br&gt;The images must be located in the root folder of the USB stick.</source>
         <translation>Önce görüntüler içeren bir USB bellek bağlayın.&lt;br&gt; Görüntüler USB belleğin kök klasöründe bulunmalıdır.</translation>
     </message>

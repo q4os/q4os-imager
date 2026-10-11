@@ -22,6 +22,8 @@
 #include <QRegularExpression>
 #include <QStandardPaths>
 #include <QStorageInfo>
+#include <QDirIterator>
+#include <QClipboard>
 #include <QTimeZone>
 #include <QWindow>
 #include <QGuiApplication>
@@ -1134,6 +1136,38 @@ QString ImageWriter::getCurrentUser()
 bool ImageWriter::hasMouse()
 {
     return !_embeddedMode || QFile::exists("/dev/input/mouse0");
+}
+
+bool ImageWriter::hasWebBrowser()
+{
+#ifdef Q_OS_LINUX
+    if (!qEnvironmentVariableIsEmpty("BROWSER"))
+        return true;
+
+    /* A browser declares the http(s) URL handlers; Trinity's Konqueror declares none */
+    QStringList dirs = QStandardPaths::standardLocations(QStandardPaths::ApplicationsLocation);
+    dirs << "/opt/trinity/share/applications/tde";
+    for (const QString &dir : dirs)
+    {
+        QDirIterator it(dir, {"*.desktop"}, QDir::Files, QDirIterator::Subdirectories);
+        while (it.hasNext())
+        {
+            QFile f(it.next());
+            if (it.fileName() == "konqbrowser.desktop")
+                return true;
+            if (f.open(QIODevice::ReadOnly) && f.readAll().contains("x-scheme-handler/http"))
+                return true;
+        }
+    }
+    return false;
+#else
+    return true;
+#endif
+}
+
+void ImageWriter::copyToClipboard(const QString &text)
+{
+    QGuiApplication::clipboard()->setText(text);
 }
 
 bool ImageWriter::customRepo()

@@ -24,6 +24,7 @@ Popup {
     property bool quitButton: false
     property bool yesButton: false
     property bool noButton: false
+    property string copyText: ""
     signal yes()
     signal no()
 
@@ -117,6 +118,18 @@ Popup {
             }
 
             ImButton {
+                id: copybutton
+                text: qsTr("COPY ADDRESS")
+                onClicked: {
+                    imageWriter.copyToClipboard(msgpopup.copyText)
+                    text = qsTr("ADDRESS COPIED")
+                }
+                visible: msgpopup.copyText !== ""
+                Material.foreground: activeFocus ? "#d1dcfb" : "#ffffff"
+                Material.background: "#c51a4a"
+            }
+
+            ImButton {
                 text: qsTr("CONTINUE")
                 onClicked: {
                     msgpopup.close()
@@ -142,6 +155,7 @@ Popup {
     }
 
     function openPopup() {
+        copybutton.text = qsTr("COPY ADDRESS")
         open()
         // trigger screen reader to speak out message
         msgpopupbody.forceActiveFocus()

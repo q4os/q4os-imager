@@ -128,6 +128,9 @@ public:
     void replaceTranslator(QTranslator *trans);
     QString detectPiKeyboard();
     Q_INVOKABLE bool hasMouse();
+    /* Without a web browser the desktop opens web links in a text editor */
+    Q_INVOKABLE bool hasWebBrowser();
+    Q_INVOKABLE void copyToClipboard(const QString &text);
 
 signals:
     /* We are emiting signals with QVariant as parameters because QML likes it that way */

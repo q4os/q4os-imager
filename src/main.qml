@@ -202,6 +202,7 @@ ApplicationWindow {
                 ColumnLayout {
                     id: columnLayout3
                     Layout.columnSpan: 3
+                    Layout.fillWidth: true
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
 
                     Text {
@@ -222,50 +223,73 @@ ApplicationWindow {
                         Material.background: "#d15d7d"
                     }
 
-                    ImButton {
-                        id: cancelwritebutton
-                        text: qsTr("CANCEL WRITE")
-                        onClicked: {
-                            enabled = false
-                            progressText.text = qsTr("Cancelling...")
-                            imageWriter.cancelWrite()
-                        }
-                        Layout.alignment: Qt.AlignRight
-                        visible: false
-                    }
-                    ImButton {
-                        id: cancelverifybutton
-                        text: qsTr("CANCEL VERIFY")
-                        onClicked: {
-                            enabled = false
-                            progressText.text = qsTr("Finalizing...")
-                            imageWriter.setVerifyEnabled(false)
-                        }
-                        Layout.alignment: Qt.AlignRight
-                        visible: false
-                    }
-
-                    ImButton {
+                    /* Cancel buttons (left) and the donate heart (right) share one
+                       row, so the heart stays visible during the whole write
+                       without overflowing the fixed-height window */
+                    RowLayout {
+                        Layout.fillWidth: true
                         Layout.bottomMargin: 25
-                        padding: 5
-                        id: donatebutton
-                        onClicked: {
-                            Qt.openUrlExternally("https://www.q4os.org/dnt_donate.html")
+
+                        ImButton {
+                            id: cancelwritebutton
+                            text: qsTr("CANCEL WRITE")
+                            onClicked: {
+                                enabled = false
+                                progressText.text = qsTr("Cancelling...")
+                                imageWriter.cancelWrite()
+                            }
+                            Layout.alignment: Qt.AlignLeft
+                            visible: false
                         }
-                        visible: true
-                        hoverEnabled: true
-                        ToolTip.visible: hovered
-                        ToolTip.delay: 1000
-                        ToolTip.text: qsTr("Help us build the perfect operating system for everyday use.")
-                        Accessible.description: qsTr("Select this button to donate to Q4OS")
-                        background: Rectangle {
-                            color: "transparent"
-                            border.color: "#bd7359"
-                            border.width: donatebutton.hovered ? 3 : 0
+                        ImButton {
+                            id: cancelverifybutton
+                            text: qsTr("CANCEL VERIFY")
+                            onClicked: {
+                                enabled = false
+                                progressText.text = qsTr("Finalizing...")
+                                imageWriter.setVerifyEnabled(false)
+                            }
+                            Layout.alignment: Qt.AlignLeft
+                            visible: false
                         }
-                        contentItem: Image {
-                            source: donatebutton.hovered ? "icons/ic_heart_hover.svg" : "icons/ic_heart_idle.svg"
-                            fillMode: Image.PreserveAspectFit
+
+                        Item {
+                            Layout.fillWidth: true
+                        }
+
+                        ImButton {
+                            padding: 5
+                            id: donatebutton
+                            onClicked: {
+                                if (imageWriter.hasWebBrowser())
+                                    Qt.openUrlExternally("https://www.q4os.org/dnt_donate.html")
+                                else
+                                    nobrowserpopup.openPopup()
+                            }
+                            visible: true
+                            hoverEnabled: true
+                            /* Left of the heart; while writing, above the progress text (over the disabled
+                               buttons), so it covers neither the progress text nor an open message */
+                            ToolTip {
+                                visible: donatebutton.hovered && !nobrowserpopup.opened && !msgpopup.opened
+                                delay: 1000
+                                text: qsTr("Help us build the perfect operating system for everyday use.")
+                                width: Math.min(implicitWidth, 320)
+                                x: -width - 8
+                                /* progressText and this row share columnLayout3; plain y bindings follow the layout */
+                                y: progressText.visible ? progressText.y - donatebutton.parent.y - donatebutton.y - height - 6
+                                                        : (donatebutton.height - height) / 2
+                            }
+                            Accessible.description: qsTr("Select this button to donate to Q4OS")
+                            background: Rectangle {
+                                color: "transparent"
+                                border.color: "#bd7359"
+                                border.width: donatebutton.hovered ? 3 : 0
+                            }
+                            contentItem: Image {
+                                source: donatebutton.hovered ? "icons/ic_heart_hover.svg" : "icons/ic_heart_idle.svg"
+                                fillMode: Image.PreserveAspectFit
+                            }
                         }
                     }
                 }
@@ -880,6 +904,13 @@ ApplicationWindow {
     }
 
     MsgPopup {
+        id: nobrowserpopup
+        copyText: "https://www.q4os.org/dnt_donate.html"
+        title: qsTr("No web browser")
+        text: qsTr("There is no web browser installed to open the donation page.<br><br>To support Q4OS, please visit<br><b>www.q4os.org/dnt_donate.html</b><br><br>Thank you!")
+    }
+
+    MsgPopup {
         id: quitpopup
         continueButton: false
         yesButton: true
@@ -900,7 +931,6 @@ ApplicationWindow {
         onYes: {
             langbar.visible = false
             writebutton.enabled = false
-            donatebutton.visible = false
             cancelwritebutton.enabled = true
             cancelwritebutton.visible = true
             cancelverifybutton.enabled = true
@@ -1029,7 +1059,6 @@ ApplicationWindow {
     function resetWriteButton() {
         progressText.visible = false
         progressBar.visible = false
-        donatebutton.visible = true
         osbutton.enabled = true
         dstbutton.enabled = true
         writebutton.visible = true

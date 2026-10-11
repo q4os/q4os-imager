@@ -55,7 +55,7 @@
     <message>
         <location filename="../downloadthread.cpp" line="217"/>
         <source>Please verify if &apos;Q4OS Imager&apos; is allowed access to &apos;removable volumes&apos; in privacy settings (under &apos;files and folders&apos; or alternatively give it &apos;full disk access&apos;).</source>
-        <translation type="unfinished">Q4OS Imagerがリムーバブルボリュームへアクセスすることがプライバシー設定(「ファイルとフォルダー」の中、またはディスクへのすべてのアクセス権限を付与する)で許可されているかを確認してください。</translation>
+        <translation>Q4OS Imagerがリムーバブルボリュームへアクセスすることがプライバシー設定(「ファイルとフォルダー」の中、またはディスクへのすべてのアクセス権限を付与する)で許可されているかを確認してください。</translation>
     </message>
     <message>
         <location filename="../downloadthread.cpp" line="239"/>
@@ -172,7 +172,7 @@
     <message>
         <location filename="../downloadthread.cpp" line="118"/>
         <source>unmounting drive</source>
-        <translation type="unfinished"></translation>
+        <translation>ドライブをアンマウントしています</translation>
     </message>
     <message>
         <location filename="../downloadthread.cpp" line="138"/>
@@ -262,27 +262,27 @@
 <context>
     <name>ImageWriter</name>
     <message>
-        <location filename="../imagewriter.cpp" line="258"/>
+        <location filename="../imagewriter.cpp" line="260"/>
         <source>Storage capacity is not large enough.&lt;br&gt;Needs to be at least %1 GB.</source>
         <translation>ストレージの容量が足りません。少なくとも%1GBは必要です。</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="264"/>
+        <location filename="../imagewriter.cpp" line="266"/>
         <source>Input file is not a valid disk image.&lt;br&gt;File size %1 bytes is not a multiple of 512 bytes.</source>
         <translation>入力されたファイルは適切なディスクイメージファイルではありません。ファイルサイズの%1は512バイトの倍数ではありません。</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="453"/>
+        <location filename="../imagewriter.cpp" line="455"/>
         <source>Downloading and writing image</source>
         <translation>イメージをダウンロードして書き込んでいます</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="586"/>
+        <location filename="../imagewriter.cpp" line="588"/>
         <source>Select image</source>
         <translation>イメージを選ぶ</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="875"/>
+        <location filename="../imagewriter.cpp" line="877"/>
         <source>Would you like to prefill the wifi password from the system keychain?</source>
         <translation>Wifiのパスワードをシステムのキーチェーンから読み取って設定しますか？</translation>
     </message>
@@ -303,22 +303,33 @@
 <context>
     <name>MsgPopup</name>
     <message>
-        <location filename="../MsgPopup.qml" line="98"/>
+        <location filename="../MsgPopup.qml" line="99"/>
         <source>NO</source>
         <translation>いいえ</translation>
     </message>
     <message>
-        <location filename="../MsgPopup.qml" line="109"/>
+        <location filename="../MsgPopup.qml" line="110"/>
         <source>YES</source>
         <translation>はい</translation>
     </message>
     <message>
-        <location filename="../MsgPopup.qml" line="120"/>
+        <location filename="../MsgPopup.qml" line="122"/>
+        <location filename="../MsgPopup.qml" line="158"/>
+        <source>COPY ADDRESS</source>
+        <translation>アドレスをコピー</translation>
+    </message>
+    <message>
+        <location filename="../MsgPopup.qml" line="125"/>
+        <source>ADDRESS COPIED</source>
+        <translation>コピーしました</translation>
+    </message>
+    <message>
+        <location filename="../MsgPopup.qml" line="133"/>
         <source>CONTINUE</source>
         <translation>続ける</translation>
     </message>
     <message>
-        <location filename="../MsgPopup.qml" line="130"/>
+        <location filename="../MsgPopup.qml" line="143"/>
         <source>QUIT</source>
         <translation>やめる</translation>
     </message>
@@ -452,7 +463,7 @@
     <message>
         <location filename="../OptionsPopup.qml" line="384"/>
         <source>Enable telemetry</source>
-        <translation type="unfinished">テレメトリーを有効化する</translation>
+        <translation>テレメトリーを有効化する</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="397"/>
@@ -482,7 +493,7 @@
     <message>
         <location filename="../UseSavedSettingsPopup.qml" line="97"/>
         <source>NO</source>
-        <translation type="unfinished">いいえ</translation>
+        <translation>いいえ</translation>
     </message>
     <message>
         <location filename="../UseSavedSettingsPopup.qml" line="107"/>
@@ -509,7 +520,7 @@
     </message>
     <message>
         <location filename="../main.qml" line="108"/>
-        <location filename="../main.qml" line="424"/>
+        <location filename="../main.qml" line="448"/>
         <source>Operating System</source>
         <translation>OS</translation>
     </message>
@@ -525,13 +536,13 @@
     </message>
     <message>
         <location filename="../main.qml" line="144"/>
-        <location filename="../main.qml" line="738"/>
+        <location filename="../main.qml" line="762"/>
         <source>Storage</source>
         <translation>ストレージ</translation>
     </message>
     <message>
         <location filename="../main.qml" line="156"/>
-        <location filename="../main.qml" line="1066"/>
+        <location filename="../main.qml" line="1095"/>
         <source>CHOOSE STORAGE</source>
         <translation>ストレージを選ぶ</translation>
     </message>
@@ -546,25 +557,25 @@
         <translation>書き込みをスタートさせるにはこのボタンを押してください</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="227"/>
+        <location filename="../main.qml" line="235"/>
         <source>CANCEL WRITE</source>
         <translation>書き込みをキャンセル</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="230"/>
-        <location filename="../main.qml" line="993"/>
+        <location filename="../main.qml" line="238"/>
+        <location filename="../main.qml" line="1023"/>
         <source>Cancelling...</source>
         <translation>キャンセル中です...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="238"/>
+        <location filename="../main.qml" line="246"/>
         <source>CANCEL VERIFY</source>
         <translation>確認をやめる</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="241"/>
-        <location filename="../main.qml" line="1016"/>
-        <location filename="../main.qml" line="1084"/>
+        <location filename="../main.qml" line="249"/>
+        <location filename="../main.qml" line="1046"/>
+        <location filename="../main.qml" line="1113"/>
         <source>Finalizing...</source>
         <translation>最終処理をしています...</translation>
     </message>
@@ -573,63 +584,63 @@
         <translation type="vanished">詳細な設定を変更するのならこのボタンを押してください</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="279"/>
+        <location filename="../main.qml" line="303"/>
         <source>Using custom repository: %1</source>
         <translation>カスタムレポジトリを使います: %1</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="288"/>
+        <location filename="../main.qml" line="312"/>
         <source>Keyboard navigation: &lt;tab&gt; navigate to next button &lt;space&gt; press button/select item &lt;arrow up/down&gt; go up/down in lists</source>
         <translation>キーボードの操作: 次のボタンに移動する→Tabキー  ボタンを押す/選択する→Spaceキー  上に行く/下に行く→矢印キー（上下）</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="314"/>
+        <location filename="../main.qml" line="338"/>
         <source>Language: </source>
         <translation>言語: </translation>
     </message>
     <message>
-        <location filename="../main.qml" line="337"/>
+        <location filename="../main.qml" line="361"/>
         <source>Keyboard: </source>
         <translation>キーボード: </translation>
     </message>
     <message>
-        <location filename="../main.qml" line="530"/>
-        <location filename="../main.qml" line="1050"/>
+        <location filename="../main.qml" line="554"/>
+        <location filename="../main.qml" line="1079"/>
         <source>Erase</source>
         <translation>削除</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="531"/>
+        <location filename="../main.qml" line="555"/>
         <source>Format card as FAT32</source>
         <translation>カードをFAT32でフォーマットする</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="540"/>
+        <location filename="../main.qml" line="564"/>
         <source>Use custom</source>
         <translation>カスタムイメージを使う</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="541"/>
+        <location filename="../main.qml" line="565"/>
         <source>Select a custom .img from your computer</source>
         <translation>自分で用意したイメージファイルを使う</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1051"/>
+        <location filename="../main.qml" line="1080"/>
         <source>&lt;b&gt;%1&lt;/b&gt; has been erased&lt;br&gt;&lt;br&gt;You can now remove the storage device</source>
         <translation>&lt;b&gt;%1&lt;/b&gt;は消去されました&lt;br&gt;&lt;br&gt;ストレージデバイスを取り外すことができます</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1058"/>
+        <location filename="../main.qml" line="1087"/>
         <source>&lt;b&gt;%1&lt;/b&gt; has been written to &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;&lt;br&gt;You can now remove the storage device</source>
         <translation>&lt;b&gt;%1&lt;/b&gt;は&lt;b&gt;%2&lt;/b&gt;に書き込まれました&lt;br&gt;&lt;br&gt;ストレージデバイスを取り外すことができます</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1313"/>
+        <location filename="../main.qml" line="1342"/>
         <source>Storage device is write protected.&lt;br&gt;If it has a physical lock switch, make sure it is unlocked, and try again.</source>
         <translation>ストレージデバイスは書き込み禁止になっています。&lt;br&gt;物理的なロックスイッチがある場合は、解除されていることを確認してから、もう一度お試しください。</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="486"/>
+        <location filename="../main.qml" line="510"/>
         <source>Back</source>
         <translation>戻る</translation>
     </message>
@@ -639,114 +650,124 @@
         <translation>書き込み先のストレージデバイスを選択するにはこのボタンを押してください</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="259"/>
+        <location filename="../main.qml" line="276"/>
         <source>Help us build the perfect operating system for everyday use.</source>
         <translation>日常使いに最適なオペレーティングシステムの開発にご協力ください。</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="260"/>
+        <location filename="../main.qml" line="283"/>
         <source>Select this button to donate to Q4OS</source>
         <translation>Q4OSに寄付するにはこのボタンを押してください</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="487"/>
+        <location filename="../main.qml" line="511"/>
         <source>Go back to main menu</source>
         <translation>メインメニューへ戻る</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="653"/>
+        <location filename="../main.qml" line="677"/>
         <source>Released: %1</source>
         <translation>リリース日時: %1</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="663"/>
+        <location filename="../main.qml" line="687"/>
         <source>Cached on your computer</source>
         <translation>コンピュータにキャッシュされたファイル</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="665"/>
+        <location filename="../main.qml" line="689"/>
         <source>Local file</source>
         <translation>ローカルファイル</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="666"/>
+        <location filename="../main.qml" line="690"/>
         <source>Online - %1 GB download</source>
-        <translation type="unfinished">インターネットからダウンロードする (%1GB)</translation>
+        <translation>インターネットからダウンロードする (%1GB)</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="791"/>
-        <location filename="../main.qml" line="843"/>
-        <location filename="../main.qml" line="849"/>
+        <location filename="../main.qml" line="815"/>
+        <location filename="../main.qml" line="867"/>
+        <location filename="../main.qml" line="873"/>
         <source>Mounted as %1</source>
         <translation>%1としてマウントされています</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="845"/>
+        <location filename="../main.qml" line="869"/>
         <source>[WRITE PROTECTED]</source>
         <translation>[書き込み禁止]</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="887"/>
+        <location filename="../main.qml" line="909"/>
+        <source>No web browser</source>
+        <translation>ウェブブラウザーがありません</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="910"/>
+        <source>There is no web browser installed to open the donation page.&lt;br&gt;&lt;br&gt;To support Q4OS, please visit&lt;br&gt;&lt;b&gt;www.q4os.org/dnt_donate.html&lt;/b&gt;&lt;br&gt;&lt;br&gt;Thank you!</source>
+        <translation>寄付ページを開くためのウェブブラウザーがインストールされていません。&lt;br&gt;&lt;br&gt;Q4OS を支援するには、次のページにアクセスしてください:&lt;br&gt;&lt;b&gt;www.q4os.org/dnt_donate.html&lt;/b&gt;&lt;br&gt;&lt;br&gt;ありがとうございます!</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="918"/>
         <source>Are you sure you want to quit?</source>
         <translation>本当にやめますか？</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="888"/>
+        <location filename="../main.qml" line="919"/>
         <source>Q4OS Imager is still busy.&lt;br&gt;Are you sure you want to quit?</source>
         <translation>Q4OS Imagerは現在まだ処理中です。&lt;bt&gt;本当にやめますか？</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="899"/>
+        <location filename="../main.qml" line="930"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="907"/>
+        <location filename="../main.qml" line="937"/>
         <source>Preparing to write...</source>
         <translation>書き込み準備中...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="931"/>
+        <location filename="../main.qml" line="961"/>
         <source>Update available</source>
         <translation>アップデートがあります</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="932"/>
+        <location filename="../main.qml" line="962"/>
         <source>There is a newer version of Imager available.&lt;br&gt;Would you like to visit the website to download it?</source>
         <translation>新しいバージョンのImagerがあります。&lt;br&gt;ダウンロードするためにウェブサイトに行きますか？</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="996"/>
+        <location filename="../main.qml" line="1026"/>
         <source>Writing... %1%</source>
         <translation>書き込み中... %1%</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="920"/>
+        <location filename="../main.qml" line="950"/>
         <source>All existing data on &apos;%1&apos; will be erased.&lt;br&gt;Are you sure you want to continue?</source>
         <translation>%1に存在するすべてのデータは完全に削除されます。本当に続けますか？</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="975"/>
+        <location filename="../main.qml" line="1005"/>
         <source>Error downloading OS list from Internet</source>
         <translation>OSのリストをダウンロードする際にエラーが発生しました。</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1019"/>
+        <location filename="../main.qml" line="1049"/>
         <source>Verifying... %1%</source>
         <translation>確認中... %1%</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1026"/>
+        <location filename="../main.qml" line="1056"/>
         <source>Preparing to write... (%1)</source>
         <translation>書き込み準備中... (%1)</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1042"/>
+        <location filename="../main.qml" line="1071"/>
         <source>Error</source>
         <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1049"/>
+        <location filename="../main.qml" line="1078"/>
         <source>Write Successful</source>
         <translation>書き込みが正常に終了しました</translation>
     </message>
@@ -763,12 +784,12 @@
         <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; は&lt;b&gt;%2&lt;/b&gt;に書き込まれました。&lt;br&gt;&lt;br&gt;SDカードをSDカードリーダーから取り出しても良いです。</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1125"/>
+        <location filename="../main.qml" line="1154"/>
         <source>Error parsing os_list.json</source>
         <translation>os_list.jsonの処理中にエラーが発生しました</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1298"/>
+        <location filename="../main.qml" line="1327"/>
         <source>Connect an USB stick containing images first.&lt;br&gt;The images must be located in the root folder of the USB stick.</source>
         <translation>最初にイメージファイルがあるUSBメモリを接続してください。&lt;br&gt;イメージファイルはUSBメモリの一番上（ルートフォルダー）に入れてください。</translation>
     </message>

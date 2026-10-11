@@ -91,6 +91,8 @@ int main(int argc, char *argv[])
     app.setOrganizationDomain("q4os.org");
     app.setApplicationName("Imager");
     app.setWindowIcon(QIcon(":/icons/q4os-imager.ico"));
+    /* Wayland takes the window icon from the matching .desktop file, not from setWindowIcon() */
+    app.setDesktopFileName("q4os-imager");
     ImageWriter imageWriter;
     NetworkAccessManagerFactory namf;
     QQmlApplicationEngine engine;

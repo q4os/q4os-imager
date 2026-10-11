@@ -160,7 +160,7 @@
     <message>
         <location filename="../downloadthread.cpp" line="118"/>
         <source>unmounting drive</source>
-        <translation type="unfinished"></translation>
+        <translation>正在卸载驱动器</translation>
     </message>
     <message>
         <location filename="../downloadthread.cpp" line="138"/>
@@ -229,7 +229,7 @@
     <message>
         <location filename="../driveformatthread.cpp" line="199"/>
         <source>Partitioning did not create expected FAT partition %1</source>
-        <translation type="unfinished"></translation>
+        <translation>分区操作未创建预期的 FAT 分区 %1</translation>
     </message>
     <message>
         <location filename="../driveformatthread.cpp" line="208"/>
@@ -250,29 +250,29 @@
 <context>
     <name>ImageWriter</name>
     <message>
-        <location filename="../imagewriter.cpp" line="258"/>
+        <location filename="../imagewriter.cpp" line="260"/>
         <source>Storage capacity is not large enough.&lt;br&gt;Needs to be at least %1 GB.</source>
         <translation>存储容量不足。&lt;br&gt;至少需要%1 GB的空白空间.</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="264"/>
+        <location filename="../imagewriter.cpp" line="266"/>
         <source>Input file is not a valid disk image.&lt;br&gt;File size %1 bytes is not a multiple of 512 bytes.</source>
         <translation>输入文件不是有效的磁盘映像。&lt;br&gt;文件大小%1字节不是512字节的倍数。</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="453"/>
+        <location filename="../imagewriter.cpp" line="455"/>
         <source>Downloading and writing image</source>
         <translation>下载和写入镜像</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="586"/>
+        <location filename="../imagewriter.cpp" line="588"/>
         <source>Select image</source>
         <translation>选择镜像</translation>
     </message>
     <message>
-        <location filename="../imagewriter.cpp" line="875"/>
+        <location filename="../imagewriter.cpp" line="877"/>
         <source>Would you like to prefill the wifi password from the system keychain?</source>
-        <translation type="unfinished"></translation>
+        <translation>是否要从系统钥匙串中预填 Wi-Fi 密码?</translation>
     </message>
 </context>
 <context>
@@ -291,24 +291,35 @@
 <context>
     <name>MsgPopup</name>
     <message>
-        <location filename="../MsgPopup.qml" line="98"/>
+        <location filename="../MsgPopup.qml" line="99"/>
         <source>NO</source>
         <translation>不</translation>
     </message>
     <message>
-        <location filename="../MsgPopup.qml" line="109"/>
+        <location filename="../MsgPopup.qml" line="110"/>
         <source>YES</source>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="../MsgPopup.qml" line="120"/>
+        <location filename="../MsgPopup.qml" line="122"/>
+        <location filename="../MsgPopup.qml" line="158"/>
+        <source>COPY ADDRESS</source>
+        <translation>复制地址</translation>
+    </message>
+    <message>
+        <location filename="../MsgPopup.qml" line="125"/>
+        <source>ADDRESS COPIED</source>
+        <translation>已复制地址</translation>
+    </message>
+    <message>
+        <location filename="../MsgPopup.qml" line="133"/>
         <source>CONTINUE</source>
         <translation>继续</translation>
     </message>
     <message>
-        <location filename="../MsgPopup.qml" line="130"/>
+        <location filename="../MsgPopup.qml" line="143"/>
         <source>QUIT</source>
-        <translation type="unfinished"></translation>
+        <translation>退出</translation>
     </message>
 </context>
 <context>
@@ -385,17 +396,17 @@
     <message>
         <location filename="../OptionsPopup.qml" line="203"/>
         <source>Set username and password</source>
-        <translation type="unfinished"></translation>
+        <translation>设置用户名和密码</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="222"/>
         <source>Username:</source>
-        <translation type="unfinished"></translation>
+        <translation>用户名:</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="298"/>
         <source>Hidden SSID</source>
-        <translation type="unfinished"></translation>
+        <translation>隐藏的 SSID</translation>
     </message>
     <message>
         <location filename="../OptionsPopup.qml" line="319"/>
@@ -474,7 +485,7 @@
     <message>
         <location filename="../UseSavedSettingsPopup.qml" line="97"/>
         <source>NO</source>
-        <translation type="unfinished">不</translation>
+        <translation>否</translation>
     </message>
     <message>
         <location filename="../UseSavedSettingsPopup.qml" line="107"/>
@@ -500,18 +511,18 @@
         <translation>树莓派镜像烧录器 v%1</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="887"/>
+        <location filename="../main.qml" line="918"/>
         <source>Are you sure you want to quit?</source>
         <translation>你确定你要退出吗？</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="888"/>
+        <location filename="../main.qml" line="919"/>
         <source>Q4OS Imager is still busy.&lt;br&gt;Are you sure you want to quit?</source>
         <translation>Q4OS Imager还未完成任务。&lt;br&gt;您确定要退出吗？</translation>
     </message>
     <message>
         <location filename="../main.qml" line="108"/>
-        <location filename="../main.qml" line="424"/>
+        <location filename="../main.qml" line="448"/>
         <source>Operating System</source>
         <translation>请选择需要写入的操作系统</translation>
     </message>
@@ -522,13 +533,13 @@
     </message>
     <message>
         <location filename="../main.qml" line="144"/>
-        <location filename="../main.qml" line="738"/>
+        <location filename="../main.qml" line="762"/>
         <source>Storage</source>
         <translation>存储设备</translation>
     </message>
     <message>
         <location filename="../main.qml" line="156"/>
-        <location filename="../main.qml" line="1066"/>
+        <location filename="../main.qml" line="1095"/>
         <source>CHOOSE STORAGE</source>
         <translation>选择存储设备</translation>
     </message>
@@ -543,22 +554,22 @@
         <translation>烧录</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="259"/>
+        <location filename="../main.qml" line="276"/>
         <source>Help us build the perfect operating system for everyday use.</source>
         <translation>帮助我们打造完美的日常操作系统。</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="260"/>
+        <location filename="../main.qml" line="283"/>
         <source>Select this button to donate to Q4OS</source>
         <translation>捐赠给 Q4OS</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="996"/>
+        <location filename="../main.qml" line="1026"/>
         <source>Writing... %1%</source>
         <translation>写入中...%1%</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="227"/>
+        <location filename="../main.qml" line="235"/>
         <source>CANCEL WRITE</source>
         <translation>取消写入</translation>
     </message>
@@ -577,116 +588,126 @@
         <translation>开始写入</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="230"/>
-        <location filename="../main.qml" line="993"/>
+        <location filename="../main.qml" line="238"/>
+        <location filename="../main.qml" line="1023"/>
         <source>Cancelling...</source>
         <translation>取消...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="238"/>
+        <location filename="../main.qml" line="246"/>
         <source>CANCEL VERIFY</source>
         <translation>取消验证</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="241"/>
-        <location filename="../main.qml" line="1016"/>
-        <location filename="../main.qml" line="1084"/>
+        <location filename="../main.qml" line="249"/>
+        <location filename="../main.qml" line="1046"/>
+        <location filename="../main.qml" line="1113"/>
         <source>Finalizing...</source>
         <translation>正在完成...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="279"/>
+        <location filename="../main.qml" line="303"/>
         <source>Using custom repository: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>正在使用自定义软件源:%1</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="288"/>
+        <location filename="../main.qml" line="312"/>
         <source>Keyboard navigation: &lt;tab&gt; navigate to next button &lt;space&gt; press button/select item &lt;arrow up/down&gt; go up/down in lists</source>
-        <translation type="unfinished"></translation>
+        <translation>键盘导航:&lt;tab&gt; 移到下一个按钮 &lt;空格&gt; 按下按钮/选择项目 &lt;上/下箭头&gt; 在列表中上下移动</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="314"/>
+        <location filename="../main.qml" line="338"/>
         <source>Language: </source>
-        <translation type="unfinished"></translation>
+        <translation>语言: </translation>
     </message>
     <message>
-        <location filename="../main.qml" line="337"/>
+        <location filename="../main.qml" line="361"/>
         <source>Keyboard: </source>
-        <translation type="unfinished"></translation>
+        <translation>键盘: </translation>
     </message>
     <message>
-        <location filename="../main.qml" line="530"/>
-        <location filename="../main.qml" line="1050"/>
+        <location filename="../main.qml" line="554"/>
+        <location filename="../main.qml" line="1079"/>
         <source>Erase</source>
         <translation>擦除</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="531"/>
+        <location filename="../main.qml" line="555"/>
         <source>Format card as FAT32</source>
         <translation>将SD卡格式化为FAT32格式</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="540"/>
+        <location filename="../main.qml" line="564"/>
         <source>Use custom</source>
         <translation>使用自定义镜像</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="541"/>
+        <location filename="../main.qml" line="565"/>
         <source>Select a custom .img from your computer</source>
         <translation>使用下载的系统镜像文件烧录</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="665"/>
+        <location filename="../main.qml" line="689"/>
         <source>Local file</source>
         <translation>本地文件</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="845"/>
+        <location filename="../main.qml" line="869"/>
         <source>[WRITE PROTECTED]</source>
         <translation>[写保护]</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="899"/>
+        <location filename="../main.qml" line="909"/>
+        <source>No web browser</source>
+        <translation>没有网页浏览器</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="910"/>
+        <source>There is no web browser installed to open the donation page.&lt;br&gt;&lt;br&gt;To support Q4OS, please visit&lt;br&gt;&lt;b&gt;www.q4os.org/dnt_donate.html&lt;/b&gt;&lt;br&gt;&lt;br&gt;Thank you!</source>
+        <translation>没有安装可打开捐赠页面的网页浏览器。&lt;br&gt;&lt;br&gt;如需支持 Q4OS,请访问&lt;br&gt;&lt;b&gt;www.q4os.org/dnt_donate.html&lt;/b&gt;&lt;br&gt;&lt;br&gt;谢谢!</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="930"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="907"/>
+        <location filename="../main.qml" line="937"/>
         <source>Preparing to write...</source>
         <translation>准备写入...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="920"/>
+        <location filename="../main.qml" line="950"/>
         <source>All existing data on &apos;%1&apos; will be erased.&lt;br&gt;Are you sure you want to continue?</source>
         <translation>&apos;%1&apos;上的所有现有数据将被删除。&lt;br&gt;确定要继续吗？</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="931"/>
+        <location filename="../main.qml" line="961"/>
         <source>Update available</source>
         <translation>检测到更新</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="932"/>
+        <location filename="../main.qml" line="962"/>
         <source>There is a newer version of Imager available.&lt;br&gt;Would you like to visit the website to download it?</source>
         <translation>有较新版本的q4os-imager。&lt;br&gt;需要下载更新吗？</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1026"/>
+        <location filename="../main.qml" line="1056"/>
         <source>Preparing to write... (%1)</source>
         <translation>写入中 (%1)</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1051"/>
+        <location filename="../main.qml" line="1080"/>
         <source>&lt;b&gt;%1&lt;/b&gt; has been erased&lt;br&gt;&lt;br&gt;You can now remove the storage device</source>
         <translation>&lt;b&gt;%1&lt;/b&gt;已被清除&lt;br&gt;&lt;br&gt;您现在可以取出存储设备了</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1058"/>
+        <location filename="../main.qml" line="1087"/>
         <source>&lt;b&gt;%1&lt;/b&gt; has been written to &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;&lt;br&gt;You can now remove the storage device</source>
         <translation>&lt;b&gt;%1&lt;/b&gt;已经写入到&lt;b&gt;%2&lt;/b&gt;&lt;br&gt;&lt;br&gt;您现在可以取出存储设备了</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1313"/>
+        <location filename="../main.qml" line="1342"/>
         <source>Storage device is write protected.&lt;br&gt;If it has a physical lock switch, make sure it is unlocked, and try again.</source>
         <translation>存储设备已被写保护。&lt;br&gt;如果它有物理锁定开关，请确保其已解锁，然后重试。</translation>
     </message>
@@ -699,12 +720,12 @@
         <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; 已经成功烧录到 &lt;b&gt;%2&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1125"/>
+        <location filename="../main.qml" line="1154"/>
         <source>Error parsing os_list.json</source>
         <translation>解析 os_list.json 错误</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1298"/>
+        <location filename="../main.qml" line="1327"/>
         <source>Connect an USB stick containing images first.&lt;br&gt;The images must be located in the root folder of the USB stick.</source>
         <translation>连接包含镜像的U盘。&lt;br&gt;镜像必须位于U盘的根文件夹中。</translation>
     </message>
@@ -713,34 +734,34 @@
         <translation type="vanished">SD卡具有写保护。&lt;br&gt;尝试向上推SD卡的左侧的锁定开关，然后重试。</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="486"/>
+        <location filename="../main.qml" line="510"/>
         <source>Back</source>
         <translation>返回</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="487"/>
+        <location filename="../main.qml" line="511"/>
         <source>Go back to main menu</source>
         <translation>回到主页</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="653"/>
+        <location filename="../main.qml" line="677"/>
         <source>Released: %1</source>
         <translation>发布时间：%1</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="663"/>
+        <location filename="../main.qml" line="687"/>
         <source>Cached on your computer</source>
         <translation>缓存在本地磁盘里</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="666"/>
+        <location filename="../main.qml" line="690"/>
         <source>Online - %1 GB download</source>
         <translation>需要下载：%1 GB</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="791"/>
-        <location filename="../main.qml" line="843"/>
-        <location filename="../main.qml" line="849"/>
+        <location filename="../main.qml" line="815"/>
+        <location filename="../main.qml" line="867"/>
+        <location filename="../main.qml" line="873"/>
         <source>Mounted as %1</source>
         <translation>挂载到：%1 上</translation>
     </message>
@@ -753,22 +774,22 @@
         <translation type="vanished">继续</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="975"/>
+        <location filename="../main.qml" line="1005"/>
         <source>Error downloading OS list from Internet</source>
         <translation>下载镜像列表错误</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1019"/>
+        <location filename="../main.qml" line="1049"/>
         <source>Verifying... %1%</source>
         <translation>验证文件中...%1%</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1042"/>
+        <location filename="../main.qml" line="1071"/>
         <source>Error</source>
         <translation>错误</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="1049"/>
+        <location filename="../main.qml" line="1078"/>
         <source>Write Successful</source>
         <translation>烧录成功</translation>
     </message>

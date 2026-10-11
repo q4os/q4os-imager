@@ -1,3 +1,23 @@
+q4os-imager (1.7.6-a1) unstable; urgency=medium
+
+  * Bump the version to 1.7.6 so the armhf build sorts above the published
+    1.7.5-a1-rpi12 (fused -rpi12 tag needs an upstream bump)
+  * Keep the donation heart button visible and clickable during the whole
+    write/verify/finalize process; it used to be hidden while writing.
+    The cancel buttons sit on the left, the heart on the right
+  * Set the desktop file name, so Wayland shows the imager icon in the title
+    bar and taskbar instead of a generic one
+  * Show the donation address in a message when no web browser is installed,
+    instead of letting the desktop open the page source in a text editor
+  * No-browser message: a COPY ADDRESS button puts the donation address on the
+    clipboard
+  * Show the donation hint to the left of the heart, so it covers neither the
+    write progress text nor an open message
+  * Complete all 12 translations (ca de fr it ja ko nl ru sk sl tr zh), incl.
+    the strings that were still untranslated
+
+ -- Jupiter4 foundation <devteam@q4os.org>  Sat, 10 Oct 2026 23:04:09 +0200
+
 q4os-imager (1.7.5-a1) unstable; urgency=medium
 
   * Initial commit
