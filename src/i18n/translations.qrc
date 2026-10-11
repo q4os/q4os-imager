@@ -13,5 +13,13 @@
         <file>q4os-imager_zh.qm</file>
         <file>q4os-imager_ca.qm</file>
         <file>q4os-imager_ja.qm</file>
+        <file>q4os-imager_cs.qm</file>
+        <file>q4os-imager_es.qm</file>
+        <file>q4os-imager_hu.qm</file>
+        <file>q4os-imager_pl.qm</file>
+        <file>q4os-imager_pt.qm</file>
+        <file>q4os-imager_he.qm</file>
+        <file>q4os-imager_id.qm</file>
+        <file>q4os-imager_uk.qm</file>
     </qresource>
 </RCC>

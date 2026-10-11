@@ -8,8 +8,8 @@ OPTION (ENABLE_TELEMETRY "Enable sending telemetry" OFF)
 project(q4os-imager LANGUAGES CXX C)
 set(IMAGER_VERSION_MAJOR 1)
 set(IMAGER_VERSION_MINOR 7)
-set(IMAGER_VERSION_STR "${IMAGER_VERSION_MAJOR}.${IMAGER_VERSION_MINOR}.6")
-set(IMAGER_VERSION_CSV "${IMAGER_VERSION_MAJOR},${IMAGER_VERSION_MINOR},6,0")
+set(IMAGER_VERSION_STR "${IMAGER_VERSION_MAJOR}.${IMAGER_VERSION_MINOR}.7")
+set(IMAGER_VERSION_CSV "${IMAGER_VERSION_MAJOR},${IMAGER_VERSION_MINOR},7,0")
 add_definitions(-DIMAGER_VERSION_STR="${IMAGER_VERSION_STR}")
 add_definitions(-DIMAGER_VERSION_CSV=${IMAGER_VERSION_CSV})
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -165,7 +165,9 @@ endif()
 set(TRANSLATIONS i18n/q4os-imager_en.ts i18n/q4os-imager_nl.ts i18n/q4os-imager_zh.ts i18n/q4os-imager_tr.ts
     i18n/q4os-imager_fr.ts i18n/q4os-imager_de.ts i18n/q4os-imager_sk.ts i18n/q4os-imager_it.ts
     i18n/q4os-imager_ca.ts i18n/q4os-imager_sl.ts i18n/q4os-imager_ko.ts i18n/q4os-imager_ja.ts
-    i18n/q4os-imager_ru.ts)
+    i18n/q4os-imager_ru.ts i18n/q4os-imager_cs.ts i18n/q4os-imager_es.ts i18n/q4os-imager_hu.ts
+    i18n/q4os-imager_pl.ts i18n/q4os-imager_pt.ts i18n/q4os-imager_he.ts i18n/q4os-imager_id.ts
+    i18n/q4os-imager_uk.ts)
 #qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TRANSLATIONS})
 if (Qt5_FOUND)
     qt5_add_translation(QM_FILES ${TRANSLATIONS})
